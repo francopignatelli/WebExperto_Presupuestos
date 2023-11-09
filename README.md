@@ -21,4 +21,16 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* Docker
+
+-docker compose build 
+
+-docker compose run --rm web bundle install  
+
+docker compose run --rm web bundle exec rake db:create 
+
+docker compose run --rm web bundle exec rake db:migrate (no siempre)
+
+docker compose run --rm --service-ports web (Debug) (En vez de up)
+
+
