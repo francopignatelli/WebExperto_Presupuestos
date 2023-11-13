@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Lineitems</h1>
+
+<div id="lineitems">
+  <% @lineitems.each do |lineitem| %>
+    <%= render lineitem %>
+    <p>
+      <%= link_to "Show this lineitem", lineitem %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New lineitem", new_lineitem_path %>
