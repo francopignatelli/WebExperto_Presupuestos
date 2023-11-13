@@ -32,3 +32,6 @@ docker compose run --rm web bundle exec rake db:create
 docker compose run --rm web bundle exec rake db:migrate (no siempre)
 
 docker compose run --rm --service-ports web (Debug) (En vez de up)
+
+#Para entrar a la consola de Rails:
+-docker compose run --rm web bundle exec rails c
