@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @lineitem %>
+
+<div>
+  <%= link_to "Edit this lineitem", edit_lineitem_path(@lineitem) %> |
+  <%= link_to "Back to lineitems", lineitems_path %>
+
+  <%= button_to "Destroy this lineitem", @lineitem, method: :delete %>
+</div>
