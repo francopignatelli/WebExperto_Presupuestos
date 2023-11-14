@@ -3,7 +3,7 @@ class CreateBudgets < ActiveRecord::Migration[7.1]
     create_table :budgets do |t|
       t.text :description
       t.string :name
-      t.references :client, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
