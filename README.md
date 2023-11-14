@@ -23,15 +23,22 @@ Things you may want to cover:
 
 * Docker
 
--docker compose build 
+docker compose build 
 
--docker compose run --rm web bundle install  
+#Solo si hay gemas nuevas
+docker compose run --rm web bundle install
 
-docker compose run --rm web bundle exec rake db:create 
+#Solo si no existe la base de datos
+docker compose run --rm web bundle exec rake db:create
 
+#Migra los modelos nuevos o las modificaciones de estos
 docker compose run --rm web bundle exec rake db:migrate (no siempre)
 
+#Enciende la pagina web localhost:3000
 docker compose run --rm --service-ports web (Debug) (En vez de up)
 
+#Elimina las migraciones hechas una a una, se debe de ejecutar varias veces
+docker compose run --rm web bundle exec rake db:rollback
+
 #Para entrar a la consola de Rails:
--docker compose run --rm web bundle exec rails c
+docker compose run --rm web bundle exec rails c
