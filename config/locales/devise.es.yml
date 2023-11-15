@@ -68,3 +68,10 @@ es:
           email: 'Correo Electrónico'
           password: 'Contraseña'
           password_confirmation: 'Confirmación de Contraseña'
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            current_password:
+              blank: "La contraseña actual no puede estar en blanco"
