@@ -1,5 +1,6 @@
 <% if user_signed_in? %>
-  <%= link_to 'Cerrar Sesión', destroy_user_session_path, method: :delete %>
+  <%= link_to 'Logout', destroy_user_session_path, method: :delete , class: "btn btn-primary" %>
 <% else %>
-  <%= link_to 'Iniciar Sesión', new_user_session_path %>
+  <%= link_to 'Login', new_user_session_path , class: "btn btn-primary" %>
 <% end %>
+
