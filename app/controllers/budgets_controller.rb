@@ -19,13 +19,14 @@ class BudgetsController < ApplicationController
   # GET /budgets/1/edit
   def edit
     @budget = Budget.find(params[:id])
-    @budget.line_items.build unless @budget.lineitems.present?
+    @budget.lineitems.build unless @budget.lineitems.present?
   end
 
   # POST /budgets or /budgets.json
   def create
     @budget = Budget.new(budget_params)
     @budget.user = current_user
+  
     respond_to do |format|
       if @budget.save
         format.html { redirect_to budget_url(@budget), notice: "Budget was successfully created." }
@@ -69,5 +70,9 @@ class BudgetsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def budget_params
       params.require(:budget).permit(:description, :name, :user_id, lineitems_attributes: [:id, :quantity, :product_id, :_destroy])
+    end
+  
+    def budget_params
+      params.require(:budget).permit(:name, :description, lineitems_attributes: [:id, :product_id, :quantity, :_destroy])
     end
 end

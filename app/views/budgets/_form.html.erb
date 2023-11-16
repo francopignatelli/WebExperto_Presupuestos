@@ -11,22 +11,42 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
-  </div>
 
   <div>
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
 
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+
+  
+
+
+
+
+
+
 <fieldset>
-        <legend>Line items:</legend>
+    <legend>Line Items</legend>
+    <div id="line_items">
+      <%= form.fields_for :line_items do |line_item_form| %>
+        <%= render 'lineitem_fields', form: form %>
+      <% end %>
+      <%= link_to_add_association 'Add Line Item', form, :lineitems, class: 'btn btn-primary' %>
+    </div>
+  </fieldset>
+
+
+
+<fieldset>
+        <legend>Productos:</legend>
         <%= form.fields_for :lineitems do |lineitems_form| %>
-            <%= render "lineitem_fields", form: lineitems_form %>
+            <%= render "lineitem_fields", form: lineitems_form %>  
         <% end %>
-        <%= link_to_add_fields "Add line item", form, :lineitems %>
     </fieldset>
 
     <%= form.submit %>

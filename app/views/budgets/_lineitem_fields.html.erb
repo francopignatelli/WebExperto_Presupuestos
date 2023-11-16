@@ -1,25 +1,17 @@
-<%#Parcial para el formulario añidado%>
-<div class="nested-fields">
-    <%= form.hidden_field :_destroy %>
+<%= form_with(model: @budget) do |form| %>
+  <!-- Otras partes del formulario -->
+
+  <div class="lineitem-fields">
     <div>
-        <%= form.label :id %>
-        <%= form.text_field :id %>
+      <%= form.label :product_id, "Product", style: "display: block" %>
+      <%= form.collection_select :product_id, Product.all, :id, :name, prompt: "Select a product" %>
     </div>
-  <div>
-    <%= form.label :quantity, style: "display: block" %>
-    <%= form.number_field :quantity %>
+
+    <!-- Otros campos del formulario de lineitem -->
+
+    <%= link_to "Remove lineitem", "#", class: "remove_fields", remote: true %>
   </div>
 
-  <div>
-    <%= form.label :product_id, style: "display: block" %>
-    <%= form.text_field :product_id %>
-  </div>
+  <!-- Otros elementos del formulario -->
 
-  <div>
-    <%= form.label :budget_id, style: "display: block" %>
-    <%= form.text_field :budget_id %>
-  </div>
-    <div>
-        <%= link_to "Remove lineitem", "#", class: "remove_fields" %>
-    </div>
-</div>
+<% end %>
