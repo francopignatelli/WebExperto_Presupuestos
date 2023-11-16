@@ -21,7 +21,13 @@
     <%= form.text_field :name %>
   </div>
 
-  <div>
+<fieldset>
+        <legend>Line items:</legend>
+        <%= form.fields_for :lineitems do |lineitems_form| %>
+            <%= render "lineitem_fields", form: lineitems_form %>
+        <% end %>
+        <%= link_to_add_fields "Add line item", form, :lineitems %>
+    </fieldset>
+
     <%= form.submit %>
-  </div>
 <% end %>
