@@ -10,20 +10,15 @@
       </ul>
     </div>
   <% end %>
-
+  <%= form.hidden_field :budget_id, value: @lineitem.budget_id %>
+  <div>
+    <%= form.label :product_id, "Product", style: "display: block" %>
+    <%= form.collection_select :product_id, Product.all, :id, :name, prompt: "Select a product" %>
+  </div>
+  
   <div>
     <%= form.label :quantity, style: "display: block" %>
     <%= form.number_field :quantity %>
-  </div>
-
-  <div>
-    <%= form.label :product_id, style: "display: block" %>
-    <%= form.text_field :product_id %>
-  </div>
-
-  <div>
-    <%= form.label :budget_id, style: "display: block" %>
-    <%= form.text_field :budget_id %>
   </div>
 
   <div>
