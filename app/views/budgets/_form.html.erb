@@ -23,6 +23,14 @@
 
   <fieldset>
       <legend>Products:</legend>
+      <div id="lineitems">
+        <% @budget.lineitems.each do |lineitem| %>
+            <%= render lineitem %>
+          <p>
+            <%= link_to "Show this lineitem", lineitem %>
+          </p>
+        <% end %>
+      </div>
       <%= link_to "Add Product", new_budget_lineitem_path(@budget), class: "btn btn-primary" %>
   </fieldset>
 

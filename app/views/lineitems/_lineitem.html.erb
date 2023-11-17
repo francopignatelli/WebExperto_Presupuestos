@@ -1,17 +1,13 @@
 <div id="<%= dom_id lineitem %>">
-  <p>
-    <strong>Quantity:</strong>
-    <%= lineitem.quantity %>
-  </p>
 
   <p>
     <strong>Product:</strong>
-    <%= lineitem.product_id %>
+    <%= lineitem.product.name %>
   </p>
 
   <p>
-    <strong>Budget:</strong>
-    <%= lineitem.budget_id %>
+    <strong>Quantity:</strong>
+    <%= lineitem.quantity %>
   </p>
 
 </div>
