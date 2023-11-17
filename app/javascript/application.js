@@ -2,3 +2,6 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import 'bootstrap'
+
+require("./packs/nested-forms/addFields");
+require("./packs/nested-forms/removeFields");
