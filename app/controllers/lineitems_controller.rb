@@ -12,7 +12,8 @@ class LineitemsController < ApplicationController
 
   # GET /lineitems/new
   def new
-    @lineitem = Lineitem.new
+    @budget = Budget.find(params[:budget_id])
+    @lineitem = @budget.lineitems.new
   end
 
   # GET /lineitems/1/edit
@@ -21,7 +22,7 @@ class LineitemsController < ApplicationController
 
   # POST /lineitems or /lineitems.json
   def create
-    @lineitem = Lineitem.new(lineitem_params)
+    @lineitem = Lineitem.build(lineitem_params)
 
     respond_to do |format|
       if @lineitem.save
