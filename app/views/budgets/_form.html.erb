@@ -27,11 +27,11 @@
         <% @budget.lineitems.each do |lineitem| %>
             <%= render lineitem %>
           <p>
-            <%= link_to "Show this lineitem", lineitem %>
+            <%= link_to "Show this product", lineitem %>
           </p>
         <% end %>
       </div>
-      <%= link_to "Add Product", new_budget_lineitem_path(@budget), class: "btn btn-primary" %>
+      <%= link_to "Add Product", new_budget_lineitem_path(@budget), class: "btn btn-primary mb-3" %>
   </fieldset>
 
     <%= form.submit %>
