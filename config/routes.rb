@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, registrations: 'users/sessions/registrations'
+  resources :users, only: [:edit, :update]
   resources :lineitems
   resources :products
   resources :budgets do

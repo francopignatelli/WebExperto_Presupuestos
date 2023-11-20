@@ -3,6 +3,7 @@
 <%# <%= link_to 'Account', users_path, class: "btn btn-primary" %> 
 <%= link_to 'Products', products_path, class: "btn btn-primary" %>
 <%= link_to 'Categories', categories_path, class: "btn btn-primary" %>
+<%= link_to 'My profile', edit_user_registration_path, class: "btn btn-primary" %>
 <% if user_signed_in? %>
   <%= link_to 'Logout', destroy_user_session_path, method: :delete , class: "btn btn-primary" %>
 <% else %>
