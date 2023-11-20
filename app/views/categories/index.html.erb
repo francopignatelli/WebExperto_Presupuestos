@@ -4,10 +4,15 @@
 
 <div id="categories">
   <% @categories.each do |category| %>
+    <div>
     <%= render category %>
+    </div>
+    <div>
     <p>
       <%= link_to "Show this category", category %>
     </p>
+    </div>
+    <hr>
   <% end %>
 </div>
 
