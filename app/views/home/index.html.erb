@@ -1,7 +1,11 @@
 <%= render 'shared/header' %>
-<h1>Welcome to Electrohous!</h1>
+<h1>Welcome to Electrohouse!</h1>
 
 <h2>Products</h2>
-<% @products.each do |product| %>
-    <%= render partial: 'products/product', locals: { product: product } %>
-<% end %>
+    <% @products.each do |product| %>
+        <%= render partial: 'products/product', locals: { product: product } %>
+    <% end %>
+<h2>Categories</h2>
+    <% @categories.each do |category| %>
+        <%= render partial: 'categories/category', locals: { category: category }%>
+    <% end %>

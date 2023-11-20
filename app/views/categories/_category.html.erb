@@ -2,6 +2,10 @@
   <p>
     <strong>Name:</strong>
     <%= category.name %>
+    <% category.products.each do |product| %>
+        <%= render partial: 'products/product', locals: { product: product } %>
+    <% end %>
   </p>
+  <hr>
 
 </div>
