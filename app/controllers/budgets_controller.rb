@@ -52,11 +52,23 @@ class BudgetsController < ApplicationController
 
   # DELETE /budgets/1 or /budgets/1.json
   def destroy
-    @budget.destroy!
+    if @budget.lineitems.length == 0
+      @budget.destroy!
 
-    respond_to do |format|
-      format.html { redirect_to budgets_url, notice: "Budget was successfully destroyed." }
-      format.json { head :no_content }
+      respond_to do |format|
+        format.html { redirect_to budgets_url, notice: "Budget was successfully destroyed." }
+        format.json { head :no_content }
+      end
+    else
+      @budget.lineitems.each do |product|
+        product.destroy!
+      end
+      @budget.destroy!
+
+      respond_to do |format|
+        format.html { redirect_to budgets_url, notice: "Budget was successfully destroyed." }
+        format.json { head :no_content }
+      end
     end
   end
 
