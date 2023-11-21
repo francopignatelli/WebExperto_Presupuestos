@@ -37,7 +37,10 @@
           <% end %>  
         <% end %>  
       </div>
-      <%= link_to "Add Product", new_budget_lineitem_path(@budget), class: "btn btn-primary mb-3" %>
+          <% if @budget.id != nil %>
+            <%= link_to "Add Product", new_budget_lineitem_path(@budget), class: "btn btn-primary mb-3" %>
+          <% end %>
+      
   </fieldset>
 
     <%= form.submit %>

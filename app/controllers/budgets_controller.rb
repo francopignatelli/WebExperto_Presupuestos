@@ -14,6 +14,7 @@ class BudgetsController < ApplicationController
   # GET /budgets/new
   def new
     @budget = Budget.new
+    @budget.lineitems.build unless @budget.lineitems.present?
   end
 
   # GET /budgets/1/edit
