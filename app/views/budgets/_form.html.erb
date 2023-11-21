@@ -25,7 +25,7 @@
       <legend>Products:</legend>
       <hr>
       <div id="lineitems">
-        <% if @budget.lineitems[0].product == nil %>
+        <% if @budget.lineitems.length == 0 %>
           <p>No products added yet.</p>
         <% else %>
           <% @budget.lineitems.each do |lineitem| %>
