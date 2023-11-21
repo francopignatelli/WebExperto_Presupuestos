@@ -26,7 +26,7 @@ class LineitemsController < ApplicationController
 
     respond_to do |format|
       if @lineitem.save
-        format.html { redirect_to lineitem_url(@lineitem), notice: "Lineitem was successfully created." }
+        format.html { redirect_to edit_budget_path(@lineitem.budget), notice: "Product was successfully added." }
         format.json { render :show, status: :created, location: @lineitem }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -53,7 +53,7 @@ class LineitemsController < ApplicationController
     @lineitem.destroy!
 
     respond_to do |format|
-      format.html { redirect_to lineitems_url, notice: "Lineitem was successfully destroyed." }
+      format.html { redirect_to edit_budget_path(@lineitem.budget), notice: "Product was successfully unassigned." }
       format.json { head :no_content }
     end
   end
