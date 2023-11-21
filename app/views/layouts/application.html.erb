@@ -8,10 +8,37 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+ 
+    <!-- Agrega estilos para centrar el contenido -->
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Opcional: Estilos adicionales para el contenido */
+      .content {
+        text-align: center;
+        max-width: 800px; /* Ancho máximo del contenido */
+        width: 100%;
+        padding: 20px;
+      }
+      
+      /* Estilos para centrar las tarjetas dentro del ancho máximo */
+      .card-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px; /* Espacio entre tarjetas */
+      }
+    </style>
   </head>
 
   <body>
-
-    <%= yield %>
+    <div class="content">
+      <%= yield %>
+    </div>
   </body>
 </html>
