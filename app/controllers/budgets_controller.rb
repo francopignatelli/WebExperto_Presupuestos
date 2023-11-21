@@ -14,13 +14,11 @@ class BudgetsController < ApplicationController
   # GET /budgets/new
   def new
     @budget = Budget.new
-    @budget.lineitems.build unless @budget.lineitems.present?
   end
 
   # GET /budgets/1/edit
   def edit
     @budget = Budget.find(params[:id])
-    @budget.lineitems.build unless @budget.lineitems.present?
   end
 
   # POST /budgets or /budgets.json
