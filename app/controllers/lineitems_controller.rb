@@ -22,11 +22,18 @@ class LineitemsController < ApplicationController
 
   # POST /lineitems or /lineitems.json
   def create
-    @lineitem = Lineitem.build(lineitem_params)
+    @lineitem = Lineitem.find_by(budget_id: lineitem_params[:budget_id], product_id: lineitem_params[:product_id])
+
+    if @lineitem.nil?
+      @lineitem = Lineitem.build(lineitem_params)
+    else
+      new_quantity = @lineitem.quantity + lineitem_params[:quantity].to_i
+      @lineitem.quantity = new_quantity
+    end
 
     respond_to do |format|
       if @lineitem.save
-        format.html { redirect_to edit_budget_path(@lineitem.budget), notice: "Product was successfully added." }
+        format.html { redirect_to edit_budget_path(@lineitem.budget), notice: t('lineitem.success') }
         format.json { render :show, status: :created, location: @lineitem }
       else
         format.html { render :new, status: :unprocessable_entity }
