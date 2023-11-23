@@ -5,4 +5,9 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  def generate_jwt
+    payload = { user_id: id }
+    JsonWebToken.encode(payload)
+  end
 end
