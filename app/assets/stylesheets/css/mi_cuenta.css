@@ -98,7 +98,6 @@ input[type="submit"] {
 	background-color: white;
 	margin: 20px 0px;
 }
-
 .form-buttons input[type="submit"]:first-child {
 	background-color: #000e8d;
 	color: white;
