@@ -1,0 +1,146 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+}
+
+/* Navbar */
+nav {
+	padding: 5px 0px;
+	background-color: #000e8d;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.back-button {
+	display: none;
+}
+
+/* Form */
+.my-account-cointainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+
+.my-account-cointainer h1 {
+	margin-top: 30px;
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: #000e8d;
+	text-align: center;
+}
+
+.my-account-budgets {
+	width: 75%;
+	height: 100px;
+	background-color: #f32ddf;
+	border-radius: 5px;
+}
+
+.my-account-budgets p {
+	text-align: center;
+	padding-top: 40px;
+	color: white;
+	font-weight: 400;
+}
+
+form div {
+	display: flex;
+	flex-direction: column;
+	margin: 2px 0px;
+	gap: 10px;
+}
+
+form div label {
+	font-weight: 500;
+	font-size: 0.9rem;
+}
+
+input[type="text"] {
+	width: 280px;
+	height: 40px;
+	border: 1px solid #000e8d;
+	border-radius: 5px;
+}
+
+.form-buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+input[type="submit"] {
+	color: #000e8d;
+	width: 140px;
+	font-size: 1rem;
+	padding: 5px 20px;
+	border: 1px solid #000e8d;
+	border-radius: 50px;
+	background-color: white;
+	margin: 20px 0px;
+}
+.form-buttons input[type="submit"]:first-child {
+	background-color: #000e8d;
+	color: white;
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+	/* Navbar */
+	.logo-burger {
+		display: none;
+	}
+	.budget-logo {
+		display: none;
+	}
+	.back-button {
+		display: block;
+		color: #000e8d;
+		width: 130px;
+		font-size: 0.9rem;
+		font-weight: bold;
+		padding: 5px 20px;
+		border: 1px solid #000e8d;
+		border-radius: 50px;
+		background-color: white;
+		margin: 20px 0px;
+	}
+
+	/* Form */
+	.my-account-budgets {
+		width: 60%;
+	}
+	input[type="text"] {
+		width: 400px;
+	}
+}
+
+/* DESKTOP */
+@media screen and (min-width: 993px) {
+	/* Navbar */
+	nav {
+		justify-content: space-between;
+		padding: 0px 40px;
+	}
+
+	/* Form */
+	.my-account-budgets {
+		width: 30%;
+	}
+	.form-container {
+		margin-top: 30px;
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+	}
+
+	.form-buttons {
+		margin-top: 20px;
+		justify-content: flex-end;
+	}
+}
