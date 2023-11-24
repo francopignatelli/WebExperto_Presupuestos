@@ -1,3 +1,46 @@
+<%= render "devise/shared/header" %>
+<main>
+			<h1 class="principal-title">Iniciar sesión</h1>
+			<div class="my-account-cointainer">
+				<img
+					class="img-sesion"
+					src="./img/registro/iniciar_sesion.svg"
+					alt=""
+				/>
+				<div class="login-container">
+					<p>¡Bienvenido! ingresá tu método para iniciar sesión</p>
+					<div class="logo-container">
+						<div>
+							<img
+								class="logo-google"
+								src="./img/logos/google.png"
+								alt="Google"
+							/>
+						</div>
+						<div>
+							<img src="./img/logos/facebook.png" alt="Facebook" />
+						</div>
+					</div>
+					<div class="email-line">
+						<div class="line"></div>
+						<p>o continuá con tu email</p>
+						<div class="line"></div>
+					</div>
+					<form action="">
+						<input type="text" placeholder="Email" />
+						<input type="submit" value="Iniciar sesión" />
+					</form>
+					<div class="registration-container">
+						<p>¿No tenés cuenta?</p>
+						<span>Registrate ahora</span>
+					</div>
+				</div>
+			</div>
+		</main>
+
+
+
+
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
