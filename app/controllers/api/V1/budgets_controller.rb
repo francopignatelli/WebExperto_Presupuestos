@@ -4,18 +4,12 @@ module Api
         before_action :set_budget, only: %i[show]
         before_action :authenticate_request!
 
-      # GET /api/v1/budgets
+      # GET /api/v1/budgets?*params
       def index
         @budgets = Budget.all.includes(:lineitems)
 
-
-        render json: { budgets: @budgets.as_json(include: :lineitems)  }
-      end
-
-      # GET /api/v1/budgets/*params
-      def show
-        debugger
-        @budgets = Budget.all.includes(:lineitems)
+        # Filtrar por nombre si el parámetro :name está presente
+        @budgets = @budgets.where(id: params[:id]) if params[:id].present?
 
         # Filtrar por nombre si el parámetro :name está presente
         @budgets = @budgets.where(name: params[:name]) if params[:name].present?
@@ -23,7 +17,19 @@ module Api
         # Filtrar por la descripcion si el parámetro :description está presente
         @budgets = @budgets.where(description: params[:description]) if params[:description].present?
 
-        
+        if @budgets.length == 0
+          render json: { error: "no budget found" }
+        else
+          render json: { budgets: @budgets.as_json(include: :lineitems)  }
+        end
+      end
+
+      # GET /api/v1/budgets/id
+      def show
+        @budgets = Budget.all.includes(:lineitems)
+
+        # Filtrar por nombre si el parámetro :name está presente
+        @budgets = @budgets.where(id: params[:id]) if params[:id].present?
 
         render json: { budgets: @budgets.as_json(include: :lineitems)  }
       end
@@ -44,11 +50,11 @@ module Api
             decoded_token = JsonWebToken.decode(token)
 
             unless decoded_token
-                render json: { error: 'en if' }, status: :unauthorized
+                render json: { error: 'No se encuentra autorizado' }, status: :unauthorized
             end
         else
             # token = request.headers['Authorization']&.split(' ')&.last
-            render json: { error: 'en else' }, status: :unauthorized
+            render json: { error: 'No se encuentra autorizado' }, status: :unauthorized
         end
       end
     end

@@ -39,10 +39,6 @@ class BudgetsController < ApplicationController
 
   # PATCH/PUT /budgets/1 or /budgets/1.json
   def update
-
-
-
-
     respond_to do |format|
       if @budget.update(budget_params)
         format.html { redirect_to budget_url(@budget), notice: "Budget was successfully updated." }
