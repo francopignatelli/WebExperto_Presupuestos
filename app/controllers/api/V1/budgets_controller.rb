@@ -2,7 +2,7 @@ module Api
     module V1
       class BudgetsController < ApplicationController
         before_action :set_budget, only: %i[show]
-        # before_action :authenticate_request!
+        before_action :authenticate_request!
 
       # GET /api/v1/budgets
       def index
@@ -22,6 +22,8 @@ module Api
 
         # Filtrar por la descripcion si el parámetro :description está presente
         @budgets = @budgets.where(description: params[:description]) if params[:description].present?
+
+        
 
         render json: { budgets: @budgets.as_json(include: :lineitems)  }
       end
