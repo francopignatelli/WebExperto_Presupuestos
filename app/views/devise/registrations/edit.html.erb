@@ -1,4 +1,6 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<%
+=begin%>
+ <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -60,4 +62,170 @@
 
 <div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
 
-<%= link_to "Back", :back %>
+<%= link_to "Back", :back %> 
+<%
+=end%>
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mi cuenta</title>
+		<link rel="stylesheet" href="./css/mi_cuenta.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<header>
+			<nav class="nav-desktop">
+				<img class="logo-burger" src="./img/logos/burger.png" alt="" />
+				<img src="./img/logos/electro-white.png" alt="" />
+				<img class="budget-logo" src="./img/logos/presup.png" alt="" />
+				<button class="back-button">Volver</button>
+			</nav>
+			<!-- Navbar mobile -->
+
+			<nav class="nav">
+				<div class="nav__container">
+					<h1 class="nav__title">Electrohouse</h1>
+
+					<a href="#menu" class="nav__menu">
+						<img src="./assets/menu.svg" class="nav__icon" />
+					</a>
+
+					<a href="#" class="nav__menu nav__menu--second">
+						<img src="./assets/close.svg" class="nav__icon" />
+					</a>
+
+					<ul class="dropdown" id="menu">
+						<li class="img-logo">
+							<img src="./img/logos/logo.svg" alt="logo" />
+						</li>
+
+						<li class="dropdown__list">
+							<a href="#" class="dropdown__link">
+								<span class="dropdown__span">Iniciar sesión</span>
+							</a>
+						</li>
+
+						<li class="dropdown__list">
+							<a href="#" class="dropdown__link">
+								<span class="dropdown__span">Registrarme</span>
+							</a>
+						</li>
+
+						<li class="dropdown__list">
+							<a href="#" class="dropdown__link">
+								<div class="dropdown-categorys">
+									<span class="dropdown__span">Categorías</span>
+									<img src="./assets/down.svg" class="dropdown__arrow" />
+								</div>
+
+								<input type="checkbox" class="dropdown__check" />
+							</a>
+
+							<div class="dropdown__content">
+								<ul class="dropdown__sub">
+									<li class="dropdown__li">
+										<a href="#" class="dropdown__anchor">Heladeras</a>
+									</li>
+									<li class="dropdown__li">
+										<a href="#" class="dropdown__anchor">Televisores</a>
+									</li>
+									<li class="dropdown__li">
+										<a href="#" class="dropdown__anchor">Aires</a>
+									</li>
+									<li class="dropdown__li">
+										<a href="#" class="dropdown__anchor">Lavarropas</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<!-- Main section -->
+		<main>
+			<div class="my-account-cointainer">
+				<h1>Mi cuenta</h1>
+				<div class="my-account-budgets">
+					<p>Mirá tus presupuestos</p>
+				</div>
+				<form action="">
+					<div class="form-container">
+						<div class="form-column-1">
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
+							<div>					
+                  <label for="">
+                    <%= f.label :name %><br />
+                    <%= f.text_field :name, autofocus: true %>
+                  </label>
+							</div>
+							<div>					
+                  <label for="">
+                    <%= f.label :last_name %><br />
+                    <%= f.text_field :last_name %>
+                  </label>
+							</div>
+							<div>					
+                  <label for="">
+                    <%= f.label :current_password %><br />
+                    <%= f.password_field :current_password, autocomplete: "current-password" %>
+                  </label>
+							</div>
+              <div>					
+                  <label for="">
+                    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+                    <%= f.password_field :password, autocomplete: "new-password" %>
+                    <% if @minimum_password_length %>
+                      <br />
+                      <em><%= @minimum_password_length %> characters minimum</em>
+                    <% end %>
+                  </label>
+							</div>
+						</div>
+						<div class="form-column-2">
+							<div>					
+                  <label for="">
+                    <%= f.label :email %><br />
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+                  </label>
+							</div>
+							<div>					
+                  <label for="">			
+                    <%= f.label :address %><br />
+                    <%= f.text_field :address %>
+                  </label>
+							</div>
+							<div>					
+                  <label for="">			
+                    <%= f.label :phone %><br />
+                    <%= f.text_field :phone %>
+                  </label>
+							</div>
+              <div>					
+                  <label for="">			
+                    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+                    <%= f.password_field :current_password, autocomplete: "current-password" %>
+                  </label>
+							</div>				
+						</div>
+					</div>
+          
+					<div class="form-buttons">
+						<%= f.submit "Update" %>
+						<%= link_to "Back", :back %> 
+					</div>
+          <% end %>
+				</form>
+			</div>
+		</main>
+	</body>
+</html>
