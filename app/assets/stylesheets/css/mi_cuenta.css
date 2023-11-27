@@ -68,6 +68,20 @@ input[type="text"] {
 	border-radius: 5px;
 }
 
+input[type="password"] {
+	width: 400px;
+	height: 40px;
+	border: 1px solid #000e8d;
+	border-radius: 5px;
+}
+
+input[type="email"] {
+	width: 400px;
+	height: 40px;
+	border: 1px solid #000e8d;
+	border-radius: 5px;
+}
+
 .form-buttons {
 	display: flex;
 	flex-direction: row;
@@ -84,6 +98,7 @@ input[type="submit"] {
 	background-color: white;
 	margin: 20px 0px;
 }
+
 .form-buttons input[type="submit"]:first-child {
 	background-color: #000e8d;
 	color: white;
