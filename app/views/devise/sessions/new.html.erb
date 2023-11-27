@@ -53,7 +53,9 @@
 				</div>
 				<div class="registration-container">
 					<p>¿No tenés cuenta?</p>
-					<span>Registrate ahora</span>
+					<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+					<%= link_to "Registrate ahora", new_registration_path(resource_name) %><br />
+					<% end %>
 				</div>
 			<% end %>
 		</div>
