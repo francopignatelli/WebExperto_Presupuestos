@@ -1,28 +1,63 @@
-<h2>Log in</h2>
+<%= render "devise/shared/header" %>
+<main class="login"> 
+<!-- Agregado por carlos -->
+	<h1 class="principal-title">Iniciar sesión</h1>
+	<div class="my-account-cointainer">
+		<img
+			class="img-sesion"
+			src="./img/registro/iniciar_sesion.svg"
+			alt=""
+		/>
+		<div class="login-container">
+			<p>¡Bienvenido! ingresá tu método para iniciar sesión</p>
+			<!-- Esta parte no tiene implementacion -->
+			<div class="logo-container">
+				<div>
+					<img
+						class="logo-google"
+						src="./img/logos/google.png"
+						alt="Google"
+					/>
+				</div>
+				<div>
+					<img src="./img/logos/facebook.png" alt="Facebook" />
+				</div>
+			</div>
+			<!-- fin -->
+			<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+				<div class="email-line">
+					<div class="line"></div>
+					<p>o continuá con tu email</p>
+					<div class="line"></div>
+				</div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email, t('devise.attributes.user.email') %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+				<div class="field">
+					<%= f.label :email, t('devise.attributes.user.email') %>
+					<%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+				</div>
 
-  <div class="field">
-    <%= f.label :password, t('devise.attributes.user.new.password') %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+				<div class="field">
+					<%= f.label :password, t('devise.attributes.user.new.password') %>
+					<%= f.password_field :password, autocomplete: "current-password" %>
+				</div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
+				<% if devise_mapping.rememberable? %>
+					<div class="field">
+					<%= f.check_box :remember_me %>
+					<%= f.label :remember_me %>
+					</div>
+				<% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<br />
-<%= render "devise/shared/links" %>
-<%= link_to "Ir al Inicio", root_path %> <br/>
+				<div class="actions">
+					<%= f.submit "Log in" %>
+				</div>
+				<div class="registration-container">
+					<p>¿No tenés cuenta?</p>
+					<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+					<%= link_to "Registrate ahora", new_registration_path(resource_name) %><br />
+					<% end %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</main>

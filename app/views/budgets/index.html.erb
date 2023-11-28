@@ -1,15 +1,25 @@
 <p style="color: green"><%= notice %></p>
 <%= render 'shared/header'%>
-<h1>Budgets</h1>
-
-<div id="budgets">
-  <% @budgets.each do |budget| %>
-    <%= render budget %>
-    <p>
-      <%= link_to "Show this budget", budget %>
-      <hr>
-    </p>
-  <% end %>
+<div class="my-budget">
+  <h1>Mis presupuestos</h1>
+  <!-- Search bar -->
+  <div class="search-container">
+    <div class="input-search-container">
+      <img class="search-icon" src="./img/icons/search.svg" alt="" />
+      <input type="text" class="search-input" placeholder="" />
+    </div>
+  </div>
+<!-- Presupuestos -->
+			<div class="budget-container">
+        <% @budgets.each do |budget| %>
+          <%= render budget %>
+          <p>
+            <%= link_to "Edit this budget", edit_budget_path(budget) %> |
+          </p>
+        <% end %>
+				<div class="budget-buttons">
+          <%= link_to "New budget", new_budget_path, class: "create-budget" %>
+					<button class="quit-budget" disabled>Quitar presupuesto</button>
+				</div>
+      </div>
 </div>
-
-<%= link_to "New budget", new_budget_path %>
