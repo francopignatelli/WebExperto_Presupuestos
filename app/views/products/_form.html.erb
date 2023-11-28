@@ -36,6 +36,17 @@
     <%= form.text_field :category_id %>
   </div>
 
+  <% if product.image.attached? %>
+    <div>
+      <%= image_tag product.image, style: "max-width: 300px; max-height: 300px;" %>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
   <div>
     <%= form.submit %>
   </div>
