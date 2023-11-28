@@ -14,7 +14,7 @@
         <% @budgets.each do |budget| %>
           <%= render budget %>
           <p>
-            <%= link_to "Show this budget", budget %>
+            <%= link_to "Edit this budget", edit_budget_path(budget) %> |
           </p>
         <% end %>
 				<div class="budget-buttons">
