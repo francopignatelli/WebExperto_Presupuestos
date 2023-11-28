@@ -11,6 +11,111 @@
     </div>
   <% end %>
 
+<div class="budget-container">
+  <%= form.text_field :name %>
+  <%= form.text_area :description %>
+</div>
+<div class="budgets">
+  <%# <p class="add-product">Add product</p> %>
+  <!-- Search bar -->
+  <%# <div class="search-container">
+    <div class="input-search-container">
+      <img class="search-icon" src="./img/icons/search.svg" alt="" />
+      <input type="text" class="search-input" placeholder="" />
+    </div>
+  </div> %>
+  <% if @budget.id != nil %>
+    <%= link_to "Add Product", new_budget_lineitem_path(@budget), class: "btn btn-primary mb-3" %>
+  <% end %>
+
+  <div class="budget first-budget">
+    <div class="budget-image">
+      <img
+        src="./img/presupuestos/aire-acondicionado.svg"
+        alt="aire-acondicionado"
+      />
+    </div>
+    <div class="budget-info">
+      <div class="budget-card-description">
+        <div>
+          <p>Aire acondicionado Split X Power</p>
+        </div>
+        <div>
+          <img src="./img/presupuestos/cross.png" alt="cross" />
+        </div>
+      </div>
+      <div class="price-container">
+        <div class="p-container">
+          <img src="./img/presupuestos/minor.png" alt="minus" />
+          <span>1</span>
+          <img src="./img/presupuestos/plus.png" alt="pluus" />
+        </div>
+        <span>$125.999 </span>
+        <span class="delete-sp">Eliminar</span>
+      </div>
+    </div>
+  </div>
+  <div class="budget">
+    <div class="budget-image">
+      <img src="./img/presupuestos/lavarropas.svg" alt="lavarropas" />
+    </div>
+    <div class="budget-info">
+      <div class="budget-card-description">
+        <div>
+          <p>Lavarropas Drean Carga Frontal 6 Kg Next 6.06</p>
+        </div>
+        <div>
+          <img src="./img/presupuestos/cross.png" alt="cross" />
+        </div>
+      </div>
+      <div class="price-container">
+        <div class="p-container">
+          <img src="./img/presupuestos/minor.png" alt="minus" />
+          <span>1</span>
+          <img src="./img/presupuestos/plus.png" alt="pluus" />
+        </div>
+        <span>$350.999 </span>
+        <span class="delete-sp">Eliminar</span>
+      </div>
+    </div>
+  </div>
+  <div class="budget">
+    <div class="budget-image">
+      <img src="./img/presupuestos/televisor.svg" alt="televisor" />
+    </div>
+    <div class="budget-info">
+      <div class="budget-card-description">
+        <div>
+          <p>Smart Tv Led Samsung 55" 4K UN55AU7000GCZB</p>
+        </div>
+        <div>
+          <img src="./img/presupuestos/cross.png" alt="cross" />
+        </div>
+      </div>
+      <div class="price-container">
+        <div class="p-container">
+          <img src="./img/presupuestos/minor.png" alt="minus" />
+          <span>1</span>
+          <img src="./img/presupuestos/plus.png" alt="pluus" />
+        </div>
+        <span>$360.999 </span>
+        <span class="delete-sp">Eliminar</span>
+      </div>
+    </div>
+  </div>
+  <p class="total-price">TOTAL: $1.000.000</p>
+  <div class="budget-buttons">
+    <button class="quit-budget">Eliminar presupuesto</button>
+    <button class="create-budget">Guardar presupuesto</button>
+  </div>
+</div>
+
+
+
+
+
+
+
   <div>
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
