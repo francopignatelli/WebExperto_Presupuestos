@@ -72,29 +72,28 @@
     </nav>
 
     <!-- Nav a partir de tablet -->
-    <nav class="nav-searchbar">
-        <div class="nav-searchbar-container">
-            <img src="./img/logos/logo.svg" alt="" />
-            <div class="nav-search-container">
-                <div class="input-search-container">
-                    <img class="search-icon" src="images/img/icons/search.svg" alt="" />
-                    <input type="text" class="nav-search-input" placeholder="" />
-                </div>
-            </div>
-            <div class="dropdown-categories">
-                <span>Categorías &#9660;</span>
-                <div class="dropdown-content">
-                    <ul>
-                        <li>Heladeras</li>
-                        <li>Televisores</li>
-                        <li>Aires</li>
-                        <li>Lavarropas</li>
-                    </ul>
-                </div>
-                <button class="btn-log-in">Iniciar sesión</button>
-            </div>
-        </div>
-    </nav>
+   	<nav class="nav-searchbar">
+			<div class="nav-searchbar-container">
+				<img src="./img/logos/logo.svg" alt="" />
+				<div class="nav-search-container">
+					<div class="input-search-container">
+						<img class="search-icon" src="./img/icons/search.svg" alt="" />
+						<input type="text" class="nav-search-input" placeholder="" />
+					</div>
+				</div>
+				<div class="dropdown-categories">
+					<div class="category-header">
+						Categorías <img src="./img/icons/down-arrow.png" alt="" />
+					</div>
+					<div class="dropdown-content">
+						<a href="categorias.html">Heladeras</a>
+						<a href="#">Televisores</a>
+						<a href="#">Aires</a>
+					</div>
+					<button class="btn-log-in">Iniciar sesión</button>
+				</div>
+			</div>
+		</nav>
 
     <!-- Search bar -->
     <div class="search-container">
@@ -130,10 +129,10 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="./images/img/carrousel/b1.svg" class="d-block w-100" alt="..." />
+                <%= image_tag 'img/carrousel/b1.svg', alt:"freezer", class:"d-block w-100"%>
             </div>
             <div class="carousel-item">
-                <img src="images/img/carrousel/b2.svg" class="d-block w-100" alt="..." />
+                <%= image_tag 'img/carrousel/b2.svg', alt:"freezer", class:"d-block w-100"%>
             </div>
         </div>
         <button
@@ -160,15 +159,10 @@
     <div class="product-container">
         <h1>Nuestros productos</h1>
         <div class="p-container">
-            <img
-                class="banner"
-                src="images/img/cards/freezers/freezer-banner.svg"
-                alt=""
-            />
+						<%= image_tag 'img/cards/freezers/freezer-banner.svg', alt:"freezer", class:"image-banner"%>
 						<div class="swiper" id="product-carrousel-1">
 							<div class="cards-container swiper-wrapper">
 									<div class="p-card swiper-slide">
-											<%#<img src="./img/cards/freezers/freezer1.png" alt="freezer" />%>
 											<%= image_tag 'img/cards/freezers/freezer1.png', alt:"freezer", class:""%>
 											<p class="card-title">Heladera con freezer Gafa Blanca 326 lts</p>
 											<div class="sales-container">
@@ -178,7 +172,7 @@
 											<span class="price">$295.999</span>
 									</div>
 									<div class="p-card swiper-slide">
-											<img src="images/img/cards/freezers/freezer2.svg" alt="freezer" />
+											<%= image_tag 'img/cards/freezers/freezer2.svg', alt:"freezer", class:""%>
 											<p class="card-title">Heladera con freezer Gafa Plata 374 lts</p>
 											<div class="sales-container">
 													<span>$333.999</span>
@@ -187,7 +181,7 @@
 											<span class="price">$311.999</span>
 									</div>
 									<div class="p-card swiper-slide">
-											<img src="images/img/cards/freezers/freezer3.svg" alt="freezer" />
+											<%= image_tag 'img/cards/freezers/freezer3.svg', alt:"freezer", class:""%>
 											<p class="card-title">Heladera cycle defrost HDR370F11S</p>
 
 											<div class="sales-container">
@@ -197,7 +191,7 @@
 											<span class="price">$494.999</span>
 									</div>
 									<div class="p-card swiper-slide">
-											<img src="./img/cards/freezers/freezer1.png" alt="" />
+											<%= image_tag 'img/cards/freezers/freezer1.png', alt:"freezer", class:""%>
 											<p class="card-title">Heladera con freezer Gafa Blanca 326lts</p>
 											<div class="sales-container">
 													<span>$340.999</span>
@@ -206,22 +200,22 @@
 											<span class="price">$295.999</span>
 									</div>
 							</div>
-							<%#SCRIPT%> 
+							<script>
+									document.addEventListener("DOMContentLoaded", () => {
+											const productCarousel1 = new Swiper(".swiper", {
+													slidesPerView:4,
+													
+											}); 
+									});
+							</script>
 						</div>	
         </div>
         <!-- Lavarropas -->
         <div class="p-container">
-            <img
-                class="banner"
-                src="./img/cards/lavarropas/lavarropas-banner.svg"
-                alt=""
-            />
-            <div class="cards-container">
+					<%= image_tag 'img/cards/lavarropas/lavarropas-banner.svg', alt:"freezer", class:"image-banner"%>
+            <div class="cards-container swiper">
                 <div class="p-card">
-                    <img
-                        src="./img/cards/lavarropas/lavarropas1.svg"
-                        alt="lavarropas"
-                    />
+										<%= image_tag 'img/cards/lavarropas/lavarropas1.svg', alt:"freezer", class:""%>
                     <p class="card-title">Lavarropas automático Drean Next 6kg</p>
                     <div class="sales-container">
                         <span>$350.999</span>
@@ -230,10 +224,7 @@
                     <span class="price">$300.999</span>
                 </div>
                 <div class="p-card">
-                    <img
-                        src="./img/cards/lavarropas/lavarropas2.svg"
-                        alt="lavarropas"
-                    />
+										<%= image_tag 'img/cards/lavarropas/lavarropas2.svg', alt:"freezer", class:""%>
                     <p class="card-title">Lavarropas Samsung 6,5kg</p>
                     <div class="sales-container">
                         <span>$750.999</span>
@@ -242,10 +233,7 @@
                     <span class="price">$660.999</span>
                 </div>
                 <div class="p-card">
-                    <img
-                        src="./img/cards/lavarropas/lavarropas3.svg"
-                        alt="lavarropas"
-                    />
+                    <%= image_tag 'img/cards/lavarropas/lavarropas3.svg', alt:"freezer", class:""%>
                     <p class="card-title">Lavarropas 9.5Kg Inverter</p>
 
                     <div class="sales-container">
@@ -255,10 +243,7 @@
                     <span class="price">$500.999</span>
                 </div>
                 <div class="p-card">
-                    <img
-                        src="./img/cards/lavarropas/lavarropas4.svg"
-                        alt="lavarropas"
-                    />
+                    <%= image_tag 'img/cards/lavarropas/lavarropas4.svg', alt:"freezer", class:""%>
                     <p class="card-title">Lavarropas Carga Frontal Electrolux</p>
                     <div class="sales-container">
                         <span>$600.999</span>
@@ -266,6 +251,14 @@
                     </div>
                     <span class="price">$500.999</span>
                 </div>
+								<script>
+									document.addEventListener("DOMContentLoaded", () => {
+											const productCarousel1 = new Swiper(".swiper", {
+													slidesPerView:4,
+													
+											}); 
+									});
+							</script>
             </div>
         </div>
         <!-- Promociones -->
@@ -289,7 +282,7 @@
         <!-- Aires -->
         <div class="p-container">
             <img class="banner" src="./img/cards/aires/aires-banner.svg" alt="" />
-            <div class="cards-container">
+            <div class="cards-container swiper ">
                 <div class="p-card">
                     <img src="./img/cards/aires/aire1.png" alt="aire" />
                     <p class="card-title">Aire Acondicionado Split 2900 Frigorías</p>
@@ -335,7 +328,7 @@
                 src="./img/cards/televisores/televisores-banner.svg"
                 alt=""
             />
-            <div class="cards-container">
+            <div class="cards-container swiper ">
                 <div class="p-card">
                     <img src="./img/cards/televisores/tele1.png" alt="televisor" />
                     <p class="card-title">Smart Tv LG Ai Thinq Webos 22 4k</p>
