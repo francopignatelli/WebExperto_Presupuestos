@@ -13,3 +13,24 @@
 </div>
 
 <%= link_to "New budget", new_budget_path %>
+
+
+<div class="my-budget">
+  <h1>Mis presupuestos</h1>
+  <!-- Search bar -->
+  <div class="search-container">
+    <div class="input-search-container">
+      <img class="search-icon" src="./img/icons/search.svg" alt="" />
+      <input type="text" class="search-input" placeholder="" />
+    </div>
+  </div>
+<!-- Presupuestos -->
+			<div class="budget-container">
+        <% @budgets.each do |budget| %>
+          <%= render budget %>
+          <p>
+            <%= link_to "Show this budget", budget %>
+          </p>
+        <% end %>
+      </div>
+</div>
