@@ -1,20 +1,5 @@
 <p style="color: green"><%= notice %></p>
 <%= render 'shared/header'%>
-<h1>Budgets</h1>
-
-<div id="budgets">
-  <% @budgets.each do |budget| %>
-    <%= render budget %>
-    <p>
-      <%= link_to "Show this budget", budget %>
-      <hr>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New budget", new_budget_path %>
-
-
 <div class="my-budget">
   <h1>Mis presupuestos</h1>
   <!-- Search bar -->
@@ -32,5 +17,9 @@
             <%= link_to "Show this budget", budget %>
           </p>
         <% end %>
+				<div class="budget-buttons">
+          <%= link_to "New budget", new_budget_path, class: "create-budget" %>
+					<button class="quit-budget" disabled>Quitar presupuesto</button>
+				</div>
       </div>
 </div>
