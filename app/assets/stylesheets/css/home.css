@@ -348,6 +348,8 @@ footer p {
 	}
 	.nav-searchbar {
 		display: block;
+		background-color: white;
+		
 	}
 	.nav-search-container {
 		display: flex;
@@ -359,6 +361,7 @@ footer p {
 		display: flex;
 		justify-content: space-around;
 		gap: 5px;
+		background-color: white;
 	}
 	.input-search-container {
 		margin: 0 auto;
@@ -418,6 +421,7 @@ footer p {
 		color: white;
 		border: none;
 		font-size: 0.9rem;
+		font-weight: 600;
 		width: 120px;
 		height: 35px;
 	}
@@ -457,9 +461,13 @@ footer p {
 		width: 600px;
 		height: 35px;
 		margin-bottom: 20px;
+		
 	}
 	.search-icon {
 		left: 550px;
+		position: absolute;
+		left:260px;
+		top:38%;
 	}
 
 	.dropdown-categories {
