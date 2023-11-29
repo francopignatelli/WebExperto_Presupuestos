@@ -477,6 +477,28 @@ footer p {
 		position: relative;
 		gap: 30px;
 	}
+
+	.my-budget-container{
+		display:flex;
+		gap: 10px;
+	}
+
+	.button-img-cont{
+		display:flex;
+		gap: 10px;
+		align-items: center;
+	}
+
+	.img-budg{
+		width: 20px;
+		height: 20px;
+	}
+
+	.btn-my-budgets{
+		border: none;
+		background-color: white;
+	}
+
 	/* Categorias menu desplegable */
 
 	.category-header {

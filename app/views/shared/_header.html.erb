@@ -1,15 +1,3 @@
-<%= link_to 'Home', root_path, class: "btn btn-primary" %>
-<%= link_to 'Budgets', budgets_path, class: "btn btn-primary" %>
-<%# <%= link_to 'Account', users_path, class: "btn btn-primary" %> 
-<%= link_to 'Products', products_path, class: "btn btn-primary" %>
-<%= link_to 'Categories', categories_path, class: "btn btn-primary" %>
-<%= link_to 'My profile', edit_user_registration_path, class: "btn btn-primary" %>
-<% if user_signed_in? %>
-  <%= link_to 'Logout', destroy_user_session_path, method: :delete , class: "btn btn-primary" %>
-<% else %>
-  <%= link_to 'Login', new_user_session_path , class: "btn btn-primary" %>
-<% end %>
-
 <!-- Navbar -->
     <nav class="nav">
         <div class="nav__container">
@@ -70,28 +58,39 @@
 
     <!-- Nav a partir de tablet -->
     <nav class="nav-searchbar">
-        <div class="nav-searchbar-container">
-            <img src="./img/logos/logo.svg" alt="" />
-            <div class="nav-search-container">
-                <div class="input-search-container">
-                    <img class="search-icon" src="images/img/icons/search.svg" alt="" />
-                    <input type="text" class="nav-search-input" placeholder="" />
-                </div>
-            </div>
-            <div class="dropdown-categories">
-                <span>Categorías &#9660;</span>
-                <div class="dropdown-content">
-                    <ul>
-                        <li>Heladeras</li>
-                        <li>Televisores</li>
-                        <li>Aires</li>
-                        <li>Lavarropas</li>
-                    </ul>
-                </div>
-                <button class="btn-log-in">Iniciar sesión</button>
-            </div>
-        </div>
-    </nav>
+			<div class="nav-searchbar-container">
+                <%= image_tag 'img/logos/logo.svg', alt:"logo"%>
+				<div class="nav-search-container">
+					<div class="input-search-container">
+						<%= image_tag 'img/icons/search.svg', alt:"logo"%>
+						<input type="text" class="nav-search-input" placeholder="" />
+					</div>
+				</div>
+				<div class="dropdown-categories">
+					<div class="category-header">
+                         Categorias <%= image_tag 'img/icons/down-arrow.png', alt:"arrow"%>
+					</div>
+					<div class="dropdown-content">
+						<a href="categorias.html">Heladeras</a>
+						<a href="#">Televisores</a>
+						<a href="#">Aires</a>
+					</div>
+					<button class="btn-log-in">Iniciar sesión</button>
+
+                    <%#Estos botones aparecen cuando inicio la sesión %>
+                    <div class="my-budget-container">
+                        <div class="button-img-cont">
+                            <%= image_tag 'img/logos/mi_cuenta.png', alt:"logo", class:"img-budg"%>
+                            <button class="btn-my-budgets">Mi cuenta</button>
+                        </div>
+                        <div class="button-img-cont">
+                            <%= image_tag 'img/logos/presup.png', alt:"logo" ,  class:"img-budg"%>
+                            <button class="btn-my-budgets">Presupuestos</button>
+                        </div>
+                    </div>
+				</div>
+			</div>
+	</nav> 
 
     <!-- Search bar -->
     <div class="search-container">
