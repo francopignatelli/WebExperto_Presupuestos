@@ -1,13 +1,16 @@
-<div id="<%= dom_id budget %>">
-
-  <p>
-    <strong>Name:</strong>
-    <%= budget.name %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= budget.description %>
-  </p>
-  
+<div id="<%= dom_id budget %>" class="budget">
+  <div class="budget-image-container">
+    <p><%= budget.name %></p>
+    <img
+      src="./img/presupuestos/presupuesto-living.png"
+      alt="presupuesto-living"
+    />
+  </div>
+  <ul class="budget-list">
+    <% budget.lineitems.limit(3).each do |lineitem| %>
+      <li>
+        <%= lineitem.product.name %>
+      </li>
+    <% end %>
+  </ul>
 </div>
