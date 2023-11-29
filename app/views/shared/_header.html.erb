@@ -1,83 +1,81 @@
 <!-- Navbar -->
-    <nav class="nav">
-        <div class="nav__container">
-            <h1 class="nav__title">Electrohouse</h1>
-            <a href="#menu" class="nav__menu">
-                <img src="images/logo-img/menu.svg" class="nav__icon" />
-            </a>
-            <a href="#" class="nav__menu nav__menu--second">
-                <img src="images/logo-img/close.svg" class="nav__icon" />
-            </a>
-            <ul class="dropdown" id="menu">
-                <li class="img-logo">
-                    <img src="images/img/logos/logo.svg" alt="logo" />
-                </li>
-
-                <li class="dropdown__list">
-                    <a href="#" class="dropdown__link">
-                        <span class="dropdown__span">Iniciar sesión</span>
-                    </a>
-                </li>
-
+<nav class="nav">
+    <div class="nav__container">
+        <h1 class="nav__title">Electrohouse</h1>
+        <a href="#menu" class="nav__menu">
+            <img src="images/logo-img/menu.svg" class="nav__icon" />
+        </a>
+        <a href="#" class="nav__menu nav__menu--second">
+            <img src="images/logo-img/close.svg" class="nav__icon" />
+        </a>
+        <ul class="dropdown" id="menu">
+            <li class="img-logo">
+                <img src="images/img/logos/logo.svg" alt="logo" />
+            </li>
+            <% if user_signed_in? %>
                 <li class="dropdown__list">
                     <a href="#" class="dropdown__link">
                         <span class="dropdown__span">Registrarme</span>
                     </a>
                 </li>
-
+            <% else %>
                 <li class="dropdown__list">
                     <a href="#" class="dropdown__link">
-                        <div class="dropdown-categorys">
-                            <span class="dropdown__span">Categorías</span>
-                            <img src="images/assets/down.svg" class="dropdown__arrow" />
-                        </div>
-
-                        <input type="checkbox" class="dropdown__check" />
+                        <span class="dropdown__span">Iniciar sesión</span>
                     </a>
-
-                    <div class="dropdown__content">
-                        <ul class="dropdown__sub">
-                            <li class="dropdown__li">
-                                <a href="#" class="dropdown__anchor">Heladeras</a>
-                            </li>
-                            <li class="dropdown__li">
-                                <a href="#" class="dropdown__anchor">Televisores</a>
-                            </li>
-                            <li class="dropdown__li">
-                                <a href="#" class="dropdown__anchor">Aires</a>
-                            </li>
-                            <li class="dropdown__li">
-                                <a href="#" class="dropdown__anchor">Lavarropas</a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
-            </ul>
-        </div>
-    </nav>
+            <% end %>
+            <li class="dropdown__list">
+                <a href="#" class="dropdown__link">
+                    <div class="dropdown-categorys">
+                        <span class="dropdown__span">Categorías</span>
+                        <img src="images/assets/down.svg" class="dropdown__arrow" />
+                    </div>
 
-    <!-- Nav a partir de tablet -->
-    <nav class="nav-searchbar">
-			<div class="nav-searchbar-container">
-                <%= image_tag 'img/logos/logo.svg', alt:"logo"%>
-				<div class="nav-search-container">
-					<div class="input-search-container">
-						<%= image_tag 'img/icons/search.svg', alt:"logo"%>
-						<input type="text" class="nav-search-input" placeholder="" />
-					</div>
-				</div>
-				<div class="dropdown-categories">
-					<div class="category-header">
-                         Categorias <%= image_tag 'img/icons/down-arrow.png', alt:"arrow"%>
-					</div>
-					<div class="dropdown-content">
-						<a href="categorias.html">Heladeras</a>
-						<a href="#">Televisores</a>
-						<a href="#">Aires</a>
-					</div>
-					<button class="btn-log-in">Iniciar sesión</button>
+                    <input type="checkbox" class="dropdown__check" />
+                </a>
 
-                    <%#Estos botones aparecen cuando inicio la sesión %>
+                <div class="dropdown__content">
+                    <ul class="dropdown__sub">
+                        <li class="dropdown__li">
+                            <a href="#" class="dropdown__anchor">Heladeras</a>
+                        </li>
+                        <li class="dropdown__li">
+                            <a href="#" class="dropdown__anchor">Televisores</a>
+                        </li>
+                        <li class="dropdown__li">
+                            <a href="#" class="dropdown__anchor">Aires</a>
+                        </li>
+                        <li class="dropdown__li">
+                            <a href="#" class="dropdown__anchor">Lavarropas</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Nav a partir de tablet -->
+<nav class="nav-searchbar">
+        <div class="nav-searchbar-container">
+            <%= image_tag 'img/logos/logo.svg', alt:"logo"%>
+            <div class="nav-search-container">
+                <div class="input-search-container">
+                    <%= image_tag 'img/icons/search.svg', alt:"logo"%>
+                    <input type="text" class="nav-search-input" placeholder="" />
+                </div>
+            </div>
+            <div class="dropdown-categories">
+                <div class="category-header">
+                        Categorias <%= image_tag 'img/icons/down-arrow.png', alt:"arrow"%>
+                </div>
+                <div class="dropdown-content">
+                    <a href="categorias.html">Heladeras</a>
+                    <a href="#">Televisores</a>
+                    <a href="#">Aires</a>
+                </div>
+                <% if user_signed_in? %>
                     <div class="my-budget-container">
                         <div class="button-img-cont">
                             <%= image_tag 'img/logos/mi_cuenta.png', alt:"logo", class:"img-budg"%>
@@ -88,14 +86,17 @@
                             <button class="btn-my-budgets">Presupuestos</button>
                         </div>
                     </div>
-				</div>
-			</div>
-	</nav> 
-
-    <!-- Search bar -->
-    <div class="search-container">
-        <div class="input-search-container">
-            <img class="search-icon" src="images/img/icons/search.svg" alt="" />
-            <input type="text" class="search-input" placeholder="" />
+                <% else %>
+                    <button class="btn-log-in">Iniciar sesión</button>
+                <% end %>               
+            </div>
         </div>
+</nav> 
+
+<!-- Search bar -->
+<div class="search-container">
+    <div class="input-search-container">
+        <img class="search-icon" src="images/img/icons/search.svg" alt="" />
+        <input type="text" class="search-input" placeholder="" />
     </div>
+</div>
