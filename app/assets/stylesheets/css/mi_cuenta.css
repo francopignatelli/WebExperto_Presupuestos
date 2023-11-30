@@ -62,7 +62,7 @@ form div label {
 }
 
 input[type="text"] {
-	width: 280px;
+	/* width: 280px; */
 	height: 40px;
 	border: 1px solid #000e8d;
 	border-radius: 5px;
@@ -116,7 +116,7 @@ input[type="submit"] {
 		width: 60%;
 	}
 	input[type="text"] {
-		width: 400px;
+		width: 100%
 	}
 }
 
