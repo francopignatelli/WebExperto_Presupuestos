@@ -11,7 +11,7 @@ body {
 
 /* Navbar */
 
-.nav {
+.nav_home {
 	background-color: #000e8d;
 	--img1: scale(1);
 	--img2: scale(0);
@@ -169,7 +169,7 @@ body {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	left: 250px;
+	right: 0.5rem;
 	cursor: pointer;
 	width: 30px;
 }
@@ -343,11 +343,12 @@ footer p {
 /* TABLET MEDIA QUERIES */
 @media screen and (min-width: 768px) {
 	/* Nav */
-	nav.nav {
+	nav.nav_home {
+		/* background-color: white; */
 		display: none;
 	}
 	.nav-searchbar {
-		display: block;
+		display: block !important;
 		background-color: white;
 		
 	}
@@ -371,7 +372,6 @@ footer p {
 		position: absolute;
 		top: 38%;
 		transform: translateY(-50%);
-		left: 260px;
 		cursor: pointer;
 		width: 30px;
 	}
@@ -424,6 +424,10 @@ footer p {
 		font-weight: 600;
 		width: 120px;
 		height: 35px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
 	}
 
 	/* Cards */
@@ -464,9 +468,7 @@ footer p {
 		
 	}
 	.search-icon {
-		left: 550px;
 		position: absolute;
-		left:260px;
 		top:38%;
 	}
 
