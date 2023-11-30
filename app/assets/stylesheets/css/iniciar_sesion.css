@@ -6,13 +6,13 @@
 }
 
 /* Navbar */
-nav {
+/* nav {
 	padding: 5px 0px;
 	background-color: #000e8d;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-}
+} */
 
 .back-button {
 	display: none;
