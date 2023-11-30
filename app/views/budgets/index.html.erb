@@ -1,11 +1,11 @@
 <%= render 'shared/header' %>
 <p style="color: green"><%= notice %></p>
-<div class="my-budget">
+<div class="budget-my-budget">
   <h1>Mis presupuestos</h1>
   <!-- Search bar -->
-  <div class="search-container">
+  <div class="budget-search-container">
     <div class="input-search-container">
-      <img class="search-icon" src="./img/icons/search.svg" alt="" />
+      <% image_tag 'img/icons/search.svg', alt:"search", class:"search-icon" %>
       <input type="text" class="search-input" placeholder="" />
     </div>
   </div>
