@@ -13,13 +13,10 @@
 			<div class="budget-container">
         <% @budgets.each do |budget| %>
           <%= render budget %>
-          <p>
-            <%= link_to "Edit this budget", edit_budget_path(budget) %> |
-          </p>
         <% end %>
 				<div class="budget-buttons">
           <%= link_to "New budget", new_budget_path, class: "create-budget" %>
-					<button class="quit-budget" disabled>Quitar presupuesto</button>
+					<button class="quit-budget" disabled>Delete budget</button>
 				</div>
       </div>
 </div>

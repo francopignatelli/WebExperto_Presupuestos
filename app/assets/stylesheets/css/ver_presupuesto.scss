@@ -227,7 +227,7 @@
 	color: #3c3838;
 }
 
-.budget-container {
+.budget-container-vp {
 	padding: 30px 20px;
 }
 
@@ -323,6 +323,10 @@
 	background-color: #ffffff;
 	color: #000e8d;
 	font-weight: 600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
 }
 
 /* TABLET */
@@ -350,12 +354,12 @@
 		display: block;
 		width: 100px;
 		// height: 30px;
-		display: flex;
 		border-radius: 50px;
 		background-color: white;
 		color: #000e8d;
 		border: none;
 		font-weight: 600;
+		display: flex;
 		justify-content: center;
 		align-items: center;
 		text-decoration: none;
@@ -423,7 +427,7 @@
 	body {
 		height: 1000px;
 	}
-	.budget-container {
+	.budget-container-vp {
 		margin: 10px 465px;
 	}
 
