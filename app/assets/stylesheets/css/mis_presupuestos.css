@@ -185,14 +185,14 @@
 	height: 45px;
 }
 
-.search-icon {
+/* .search-icon {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 	left: 250px;
 	cursor: pointer;
 	width: 30px;
-}
+} */
 
 .search-input {
 	padding-left: 30px;
@@ -255,7 +255,7 @@
 	z-index: 2;
 }
 
-.budget button {
+.budget-button {
 	margin-top: 55px;
 	height: 40px;
 	width: 150px;
@@ -265,6 +265,10 @@
 	color: #000e8d;
 	font-weight: bold;
 	font-size: 0.9rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
 }
 
 .budget-buttons {
@@ -282,6 +286,14 @@
 	background-color: #000e8d;
 	color: white;
 	font-weight: 600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+}
+
+.create-budget:hover{
+	color: wheat;
 }
 
 .quit-budget {
@@ -292,6 +304,10 @@
 	background-color: #ffffff;
 	color: #000e8d;
 	font-weight: 600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
 }
 
 /* TABLET */
@@ -327,9 +343,9 @@
 	}
 
 	/* Searchbar */
-	.search-icon {
+	/* .search-icon {
 		left: 620px;
-	}
+	} */
 
 	/* Presupuestos */
 
@@ -378,12 +394,12 @@
 		margin-left: 600px;
 	}
 
-	.search-icon {
+	/* .search-icon {
 		left: 1050px;
-	}
+	} */
 
 	/* Presupuestos */
-	.budget-container {
+	/* .budget-container {
 		margin: 0px 400px;
-	}
+	} */
 }
