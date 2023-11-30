@@ -19,6 +19,7 @@ class BudgetsController < ApplicationController
   # GET /budgets/1/edit
   def edit
     @budget = Budget.find(params[:id])
+    @total_price = total(@budget)
   end
 
   # POST /budgets or /budgets.json
@@ -70,6 +71,14 @@ class BudgetsController < ApplicationController
         format.json { head :no_content }
       end
     end
+  end
+
+  def total(budget)
+    total = 0
+    budget.lineitems.each do |lineitem|
+      total += lineitem.quantity * lineitem.product.price
+    end
+    total
   end
 
   private

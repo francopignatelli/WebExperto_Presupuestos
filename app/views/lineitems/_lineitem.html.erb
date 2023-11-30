@@ -1,13 +1,22 @@
 <div id="<%= dom_id lineitem %>">
-
-  <p>
-    <strong>Product:</strong>
-    <%= lineitem.product.name %>
-  </p>
-
-  <p>
-    <strong>Quantity:</strong>
-    <%= lineitem.quantity %>
-  </p>
-
+  <div class="budget-image">
+    <%# AGREGAR PATH DE IMAGEN %>
+  </div>
+  <div class="budget-info">
+    <div class="budget-card-description">
+      <div>
+        <p><%= lineitem.product.name %></p>
+      </div>
+      <div>
+        <img src="" alt="cross" />
+      </div>
+    </div>
+    <div class="price-container">
+      <div class="p-container">
+        <%= lineitem.quantity %>
+      </div>
+      <%= number_to_currency(lineitem.product.price, unit: '$', precision: 2, delimiter: '.', separator: ',') %>
+      <span class="delete-sp">Eliminar</span>
+    </div>
+  </div>
 </div>
