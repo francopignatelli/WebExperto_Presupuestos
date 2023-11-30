@@ -1,7 +1,7 @@
 <div id="<%= dom_id budget %>" class="budget">
   <div class="budget-image-container">
     <p><%= budget.name %></p>
-    <% image_tag 'img/presupuestos/presupuesto-living.png', alt:"presupuesto-living", class:"search-icon" %>
+    <%= image_tag 'img/presupuestos/presupuesto-living.png', alt:"presupuesto-living", class:"search-icon" %>
   </div>
   <ul class="budget-list">
     <% budget.lineitems.limit(3).each do |lineitem| %>
