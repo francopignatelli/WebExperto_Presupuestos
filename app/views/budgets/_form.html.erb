@@ -37,9 +37,13 @@
         </p>
       <% end %>  
     </div>
-    <div class="budget-buttons">
+  </div>
+  <div class="budget-buttons">
+    <% if @budget.id != nil %>
       <button class="quit-budget">Eliminar presupuesto</button>
       <%= form.submit %>
-    </div>
+    <% else %>
+      <%= form.submit %>
+    <% end %>
   </div>
 <% end %>
