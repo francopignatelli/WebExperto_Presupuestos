@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="nav">
+<nav class="nav_home">
     <div class="nav__container">
         <h1 class="nav__title">Electrohouse</h1>
         <a href="#menu" class="nav__menu">
@@ -62,7 +62,7 @@
             <%= image_tag 'img/logos/logo.svg', alt:"logo"%>
             <div class="nav-search-container">
                 <div class="input-search-container">
-                    <%= image_tag 'img/icons/search.svg', alt:"logo"%>
+                    <%= image_tag 'img/icons/search.svg', alt:"logo", class: "search-icon" %>
                     <input type="text" class="nav-search-input" placeholder="" />
                 </div>
             </div>
@@ -74,29 +74,24 @@
                     <a href="categorias.html">Heladeras</a>
                     <a href="#">Televisores</a>
                     <a href="#">Aires</a>
-                </div>
+                </div>              
+            </div>
                 <% if user_signed_in? %>
                     <div class="my-budget-container">
                         <div class="button-img-cont">
                             <%= image_tag 'img/logos/mi_cuenta.png', alt:"logo", class:"img-budg"%>
-                            <button class="btn-my-budgets">Mi cuenta</button>
+                            <%= link_to 'My account', edit_user_registration_path, class: "btn-log-in" %>
+                            <%# <button class="btn-my-budgets">Mi cuenta</button> %>
                         </div>
                         <div class="button-img-cont">
                             <%= image_tag 'img/logos/presup.png', alt:"logo" ,  class:"img-budg"%>
-                            <button class="btn-my-budgets">Presupuestos</button>
+                            <%# <button class="btn-my-budgets">Budgets</button> %>
+                            <%= link_to 'Budgets', budgets_path, class: "btn-log-in" %>
                         </div>
                     </div>
                 <% else %>
-                    <button class="btn-log-in">Iniciar sesión</button>
-                <% end %>               
-            </div>
+                    <%= link_to 'Login', new_user_session_path , class: "btn-log-in" %>
+                <% end %> 
         </div>
 </nav> 
 
-<!-- Search bar -->
-<div class="search-container">
-    <div class="input-search-container">
-        <img class="search-icon" src="images/img/icons/search.svg" alt="" />
-        <input type="text" class="search-input" placeholder="" />
-    </div>
-</div>
