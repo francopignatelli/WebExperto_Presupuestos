@@ -16,14 +16,6 @@
     <%= form.text_area :description %>
   </div>
   <div class="budgets">
-    <%# <p class="add-product">Add product</p> %>
-    <!-- Search bar -->
-    <%# <div class="search-container">
-      <div class="input-search-container">
-        <img class="search-icon" src="./img/icons/search.svg" alt="" />
-        <input type="text" class="search-input" placeholder="" />
-      </div>
-    </div> %>
     <% if @budget.id != nil %>
       <%= link_to "Add Product", new_budget_lineitem_path(@budget), class: "btn btn-primary mb-3" %>
     <% end %>
@@ -43,7 +35,7 @@
     </div>
     <p class="total-price">
       TOTAL:
-      <%= @total_price %>
+      <%= number_to_currency(@total_price, unit: '$', precision: 2, delimiter: '.', separator: ',') %>
     </p>
     <div class="budget-buttons">
       <button class="quit-budget">Eliminar presupuesto</button>
