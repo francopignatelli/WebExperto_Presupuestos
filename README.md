@@ -31,11 +31,11 @@ docker compose run --rm web bundle install
 #Solo si no existe la base de datos
 docker compose run --rm web bundle exec rake db:create
 
-#Migra los modelos nuevos o las modificaciones de estos
-docker compose run --rm web bundle exec rake db:migrate (no siempre)
+#Migra los modelos nuevos o las modificaciones de estos (no siempre)
+docker compose run --rm web bundle exec rake db:migrate 
 
-#Enciende la pagina web localhost:3000
-docker compose run --rm --service-ports web (Debug) (En vez de up)
+#Enciende la pagina web localhost:3000 (Debug) (En vez de up)
+docker compose run --rm --service-ports web 
 
 #Elimina las migraciones hechas una a una, se debe de ejecutar varias veces
 docker compose run --rm web bundle exec rake db:rollback
