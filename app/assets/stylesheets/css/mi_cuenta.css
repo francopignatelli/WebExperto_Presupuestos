@@ -40,6 +40,8 @@ nav {
 	height: 100px;
 	background-color: #f32ddf;
 	border-radius: 5px;
+	text-decoration: none;
+	color: white;
 }
 
 .my-account-budgets p {
