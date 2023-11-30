@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="budget-container-vp">
-    <%= form.text_field :name %>
-    <%= form.text_area :description %>
+    <%= form.text_field :name, placeholder: 'Budget name' %>
+    <%= form.text_area :description, placeholder: 'Budget description' %>
   </div>
   <div class="budgets">
     <% if @budget.id != nil %>
@@ -31,12 +31,12 @@
           </p>
           <hr>
         <% end %>  
+        <p class="total-price">
+          TOTAL:
+          <%= number_to_currency(@total_price, unit: '$', precision: 2, delimiter: '.', separator: ',') %>
+        </p>
       <% end %>  
     </div>
-    <p class="total-price">
-      TOTAL:
-      <%= number_to_currency(@total_price, unit: '$', precision: 2, delimiter: '.', separator: ',') %>
-    </p>
     <div class="budget-buttons">
       <button class="quit-budget">Eliminar presupuesto</button>
       <%= form.submit %>
