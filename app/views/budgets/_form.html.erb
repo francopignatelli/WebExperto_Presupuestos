@@ -41,9 +41,9 @@
   <div class="budget-buttons">
     <% if @budget.id != nil %>
       <%= link_to "Eliminar", @budget, method: :delete, data: { confirm: "¿Estás seguro de que quieres eliminar este presupuesto?" }, class: "quit-budget" %>
-      <%= form.submit "Guardar", class: "btn-log-in" %>
+      <%= form.submit "Guardar", class: "vp-btn-guardar" %>
     <% else %>
-      <%= form.submit "Guardar", class: "btn-log-in" %>
+      <%= form.submit "Guardar", class: "vp-btn-guardar" %>
     <% end %>
   </div>
 <% end %>
