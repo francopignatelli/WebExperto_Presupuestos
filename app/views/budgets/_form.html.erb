@@ -33,7 +33,7 @@
         <% end %>  
         <p class="total-price">
           TOTAL:
-          <%= number_to_currency(@total_price, unit: '$', precision: 2, delimiter: '.', separator: ',') %>
+          <%= number_to_currency(@total_price, unit: '$', precision: 2, delimiter: ',', separator: '.') %>
         </p>
       <% end %>  
     </div>

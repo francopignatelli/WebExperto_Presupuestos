@@ -40,15 +40,24 @@ nav {
 	height: 100px;
 	background-color: #f32ddf;
 	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	text-decoration: none;
 	color: white;
+
+	transition: background-color 0.3s ease;
 }
+
+.my-account-budgets:hover {
+	background-color: #a52ed1; /* Cambia el color al pasar el cursor sobre el botón */
+  }
 
 .my-account-budgets p {
 	text-align: center;
-	padding-top: 40px;
+	/* padding-top: 40px;
 	color: white;
-	font-weight: 400;
+	font-weight: 400; */
 }
 
 /* form div {
