@@ -37,7 +37,7 @@
 
                 <div class="dropdown__content">
                     <ul class="dropdown__sub">
-                        <li class="dropdown__li">
+                        <%# <li class="dropdown__li">
                             <a href="#" class="dropdown__anchor">Heladeras</a>
                         </li>
                         <li class="dropdown__li">
@@ -48,7 +48,7 @@
                         </li>
                         <li class="dropdown__li">
                             <a href="#" class="dropdown__anchor">Lavarropas</a>
-                        </li>
+                        </li> %>
                     </ul>
                 </div>
             </li>
@@ -71,9 +71,12 @@
                         Categorias <%= image_tag 'img/icons/down-arrow.png', alt:"arrow"%>
                 </div>
                 <div class="dropdown-content">
-                    <a href="categorias.html">Heladeras</a>
-                    <a href="#">Televisores</a>
-                    <a href="#">Aires</a>
+                    <% @categories.each do |category| %>
+                        <p>
+                            <%= link_to category.name, category_path(category) %>
+                        </p>
+                    <% end %>
+
                 </div>              
             </div>
                 <% if user_signed_in? %>
