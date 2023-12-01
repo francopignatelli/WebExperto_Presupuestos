@@ -72,6 +72,7 @@
 			<div class="form-buttons">
 				<%= f.submit "Update" %>
 				<%= link_to "Back", :root, class: "back-button-mi-cuenta"%>
+				 <%= link_to 'Logout', destroy_user_session_path, method: :delete , class: "back-button-mi-cuenta" %>
 			</div>
 			<% end %>
 		</form>
