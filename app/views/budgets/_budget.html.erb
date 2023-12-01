@@ -1,7 +1,7 @@
 <div id="<%= dom_id budget %>" class="budget">
   <div class="budget-image-container">
     <p><%= budget.name %></p>
-    <%= image_tag 'img/presupuestos/presupuesto-living.png', alt:"presupuesto-living", class:"search-icon" %>
+    <%= image_tag 'img/presupuestos/presupuesto-living.png', alt:"presupuesto-living" %>
   </div>
   <ul class="budget-list">
     <% budget.lineitems.limit(3).each do |lineitem| %>
@@ -10,5 +10,5 @@
       </li>
     <% end %>
   </ul>
-  <%= link_to "Edit this budget", edit_budget_path(budget), class: "budget-button " %>
+  <%= link_to "Ver presupuesto", edit_budget_path(budget), class: "budget-button " %>
 </div>
