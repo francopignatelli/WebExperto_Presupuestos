@@ -9,7 +9,7 @@ module Api
             token = user.generate_jwt
             render json: { token: token }
           else
-            render json: { error: 'No te detecto las credenciales loquito' }, status: :unauthorized
+            render json: { error: 'No te detecto las credenciales' }, status: :unauthorized
           end
         end
       end
