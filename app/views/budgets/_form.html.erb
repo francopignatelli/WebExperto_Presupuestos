@@ -26,6 +26,7 @@
       <% else %>
         <% @budget.lineitems.each do |lineitem| %>
             <%= render lineitem %>
+    </div>
           <p>
             <%= link_to "Show this product", lineitem %>
           </p>
@@ -47,3 +48,4 @@
     <% end %>
   </div>
 <% end %>
+ <%= button_to "Eliminar", @budget, method: :delete, class: "quit-budget", form: { data: {'turbo-confirm': '¿Estás seguro de que quieres eliminar este presupuesto?'} } %>

@@ -11,4 +11,5 @@
     <% end %>
   </ul>
   <%= link_to "Ver presupuesto", edit_budget_path(budget), class: "budget-button " %>
+  <%= button_to "Eliminar", budget, method: :delete, class: "quit-budget", form: { data: {'turbo-confirm': '¿Estás seguro de que quieres eliminar este presupuesto?'} } %>
 </div>
