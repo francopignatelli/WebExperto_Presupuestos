@@ -485,4 +485,25 @@
 	// .search-icon {
 	// 	left: 600px;
 	// }
+
+	.ver-presupuesto-h1{
+		text-align: center;
+		color: #000e8d;
+		font-size: 1.5rem;
+	}
+	.vp-btn-guardar{
+		margin-top: 55px;
+		height: 40px;
+		width: 150px;
+		border-radius: 50px;
+		border: none;
+		background-color: #000e8d;
+		color: white;
+		font-weight: bold;
+		font-size: 0.9rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+	}
 }
