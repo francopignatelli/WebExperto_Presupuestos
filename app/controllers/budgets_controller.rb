@@ -71,7 +71,7 @@ class BudgetsController < ApplicationController
   def total(budget)
     total = 0
     budget.lineitems.each do |lineitem|
-      total += lineitem.quantity * lineitem.product.price
+      total += (lineitem.quantity * lineitem.product.price)
     end
     total
   end

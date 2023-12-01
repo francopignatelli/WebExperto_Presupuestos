@@ -19,7 +19,7 @@
       <div class="p-container-vp">
         <%= lineitem.quantity %>
       </div>
-      <%= number_to_currency(lineitem.product.price, unit: '$', precision: 2, delimiter: '.', separator: ',') %>
+      <%= number_to_currency(lineitem.product.price, unit: '$', precision: 2, delimiter: ',', separator: '.1') %> 
       <span class="delete-sp">Eliminar</span>
     </div>
   </div>
