@@ -174,33 +174,35 @@
 
 /* Searchbar */
 .budget-search-container{
+	margin: 0 auto;
 	height: 80px;
 	background-color: white;
 }
 .input-search-container {
 	position: relative;
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
 	margin-top: 40px;
 	height: 45px;
 }
 
-/* .search-icon {
+.my-budget-search-icon{
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	left: 250px;
+	left: 350px;
 	cursor: pointer;
 	width: 30px;
-} */
+}
 
-.search-input {
+.my-budget-search-input{
 	padding-left: 30px;
 	width: 100%;
 	height: 45px;
 	border: 1px solid #000e8d;
 	box-shadow: 2px 2px 5px rgba(0, 14, 141, 0.1);
 	border-radius: 50px;
+
 }
 
 /*Presupuestos*/
@@ -271,14 +273,14 @@
 	text-decoration: none;
 }
 
-.budget-buttons {
+.my-budgets-budget-buttons {
 	margin-top: 30px;
 	display: flex;
 	justify-content: center;
 	gap: 10px;
 }
 
-.create-budget {
+.my-budget-create-budget {
 	border-radius: 50px;
 	width: 150px;
 	height: 35px;
@@ -286,17 +288,18 @@
 	background-color: #000e8d;
 	color: white;
 	font-weight: 600;
+	font-size: 0.8rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-decoration: none;
 }
 
-.create-budget:hover{
+.my-budget-create-budget:hover{
 	color: wheat;
 }
 
-.quit-budget {
+.my-budget-quit-budget {
 	border-radius: 50px;
 	width: 150px;
 	height: 35px;
@@ -304,6 +307,7 @@
 	background-color: #ffffff;
 	color: #000e8d;
 	font-weight: 600;
+	font-size: .8rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -369,8 +373,8 @@
 		font-size: 0.9rem;
 	}
 
-	.budget-buttons {
-		justify-content: flex-end;
+	.my-budgets-budget-buttons {
+		/* justify-content: flex-end; */
 	}
 
 	.budget-list {
@@ -387,11 +391,18 @@
 @media screen and (min-width: 993px) {
 	/* Searchbar */
 	.budget-my-budget h1 {
+		text-align: center;
 		margin-top: 70px;
 	}
-	.search-input {
+	.budget-search-container{
+		margin-left: 400px;
+	}
+	.my-budget-search-input{
 		width: 30%;
-		margin-left: 600px;
+		
+	}
+	.my-budgets-budget-buttons{
+		
 	}
 
 	/* .search-icon {

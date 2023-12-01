@@ -5,8 +5,8 @@
   <!-- Search bar -->
   <div class="budget-search-container">
     <div class="input-search-container">
-      <% image_tag 'img/icons/search.svg', alt:"search", class:"search-icon" %>
-      <input type="text" class="search-input" placeholder="" />
+      <%= image_tag 'img/icons/search.svg', alt:"search", class:"my-budget-search-icon" %>
+      <input type="text" class="my-budget-search-input" placeholder="" />
     </div>
   </div>
 <!-- Presupuestos -->
@@ -14,9 +14,9 @@
         <% @budgets.each do |budget| %>
           <%= render budget %>
         <% end %>
-				<div class="budget-buttons">
-          <%= link_to "New budget", new_budget_path, class: "create-budget" %>
-					<button class="quit-budget" disabled>Delete budget</button>
+				<div class="my-budgets-budget-buttons">
+          <button class="my-budget-quit-budget" disabled>Quitar presupuesto</button>
+          <%= link_to "Crear presupuesto", new_budget_path, class: "my-budget-create-budget" %>
 				</div>
       </div>
 </div>
