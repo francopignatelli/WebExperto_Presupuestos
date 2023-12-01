@@ -40,7 +40,7 @@
   </div>
   <div class="budget-buttons">
     <% if @budget.id != nil %>
-      <button class="quit-budget">Eliminar</button>
+      <%= link_to "Eliminar", @budget, class: "quit-budget"%>
       <%= form.submit "Guardar", class: "btn-log-in" %>
     <% else %>
       <%= form.submit "Guardar", class: "btn-log-in" %>
