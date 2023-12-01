@@ -239,6 +239,7 @@
 	margin-left: none;
 }
 
+// NO SACAR
 .budget-info {
 	margin-left: 40px;
 	width: 90%;
@@ -252,8 +253,10 @@
 
 .budget-image img {
 	margin-top: 15px;
-	width: 70px;
-	height: 70px;
+	width: 300px;
+	height: 300px;
+	align-items: center;
+	display: flex;
 }
 
 .budget-card-description {
@@ -417,10 +420,6 @@
 		padding: 0px 30px;
 	}
 
-	.budget-image img {
-		margin-top: 30px;
-	}
-
 	.budget-card-description img {
 		display: none;
 	}
@@ -429,6 +428,7 @@
 		width: 250px;
 	}
 
+	// NO SACAR
 	.budget-info {
 		display: flex;
 		align-items: center;

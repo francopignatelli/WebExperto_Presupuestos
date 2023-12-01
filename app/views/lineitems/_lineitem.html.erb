@@ -1,18 +1,22 @@
 <div id="<%= dom_id lineitem %>">
   <div class="budget-image">
     <%# AGREGAR PATH DE IMAGEN %>
+    <% if lineitem.product.image.attached? %>
+    <div>
+      <%= image_tag lineitem.product.image, style: "max-width: 300px; max-height: 300px;" %>
+    </div>
+  <% else %>
+    <p>Imagen no disponible</p>
+  <% end %>
   </div>
   <div class="budget-info">
     <div class="budget-card-description">
       <div>
         <p><%= lineitem.product.name %></p>
       </div>
-      <div>
-        <img src="" alt="cross" />
-      </div>
     </div>
     <div class="price-container">
-      <div class="p-p-container-vp">
+      <div class="p-container-vp">
         <%= lineitem.quantity %>
       </div>
       <%= number_to_currency(lineitem.product.price, unit: '$', precision: 2, delimiter: '.', separator: ',') %>
