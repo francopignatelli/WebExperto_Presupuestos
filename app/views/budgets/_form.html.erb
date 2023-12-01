@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <div class="budget-container-vp">
+  <div class="budget-container-vp mi-cuenta-form-div">
     <%= form.text_field :name, placeholder: 'Budget name' %>
     <%= form.text_area :description, placeholder: 'Budget description' %>
   </div>
@@ -40,10 +40,10 @@
   </div>
   <div class="budget-buttons">
     <% if @budget.id != nil %>
-      <button class="quit-budget">Eliminar presupuesto</button>
-      <%= form.submit %>
+      <button class="quit-budget">Eliminar</button>
+      <%= form.submit "Guardar", class: "btn-log-in" %>
     <% else %>
-      <%= form.submit %>
+      <%= form.submit "Guardar", class: "btn-log-in" %>
     <% end %>
   </div>
 <% end %>
