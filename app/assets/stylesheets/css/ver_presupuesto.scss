@@ -253,8 +253,10 @@
 
 .budget-image img {
 	margin-top: 15px;
-	width: 70px;
-	height: 70px;
+	width: 300px;
+	height: 300px;
+	align-items: center;
+	display: flex;
 }
 
 .budget-card-description {
@@ -416,10 +418,6 @@
 		justify-content: space-around;
 		gap: 40px;
 		padding: 0px 30px;
-	}
-
-	.budget-image img {
-		margin-top: 30px;
 	}
 
 	.budget-card-description img {
