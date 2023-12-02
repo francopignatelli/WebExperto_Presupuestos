@@ -2,7 +2,6 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import 'bootstrap'
-import 'budget_actions'
 
 require("./packs/nested-forms/addFields");
 require("./packs/nested-forms/removeFields");
