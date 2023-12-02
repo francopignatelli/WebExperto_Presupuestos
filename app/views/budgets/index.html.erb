@@ -1,22 +1,28 @@
-<%= render 'shared/header' %>
-<p style="color: green"><%= notice %></p>
-<div class="budget-my-budget">
-  <h1>Mis presupuestos</h1>
-  <!-- Search bar -->
-  <div class="budget-search-container">
-    <div class="input-search-container">
-      <%= image_tag 'img/icons/search.svg', alt:"search", class:"my-budget-search-icon" %>
-      <input type="text" class="my-budget-search-input" placeholder="" />
-    </div>
-  </div>
-<!-- Presupuestos -->
-			<div class="budget-container">
-        <% @budgets.each do |budget| %>
-          <%= render budget %>
-        <% end %>
-				<div class="my-budgets-budget-buttons">
-          <button class="my-budget-quit-budget" disabled>Quitar presupuesto</button>
-          <%= link_to "Crear presupuesto", new_budget_path, class: "my-budget-create-budget" %>
-				</div>
+<section class="section-mis-presupuestos">
+  <%= render 'shared/header' %>
+  <p style="color: green"><%= notice %></p>
+  <div class="my-budget">
+    <h1>Mis presupuestos</h1>
+    <!-- Search bar -->
+    <div class="search-container">
+      <div class="input-search-container">
+        <%= image_tag 'img/icons/search.svg', alt:"search", class:"search-icon" %>
+        <input type="text" class="my-budget-search-input" placeholder="" />
       </div>
-</div>
+    </div>
+  <!-- Presupuestos -->
+        <div class="budget-container">
+          <% @budgets.each do |budget| %>
+            <%= render budget %>
+          <% end %>
+          <div class="budget-buttons">
+            <button class="quit-budget" disabled>Quitar presupuesto</button>
+            <%= link_to "Crear presupuesto", new_budget_path, class: "create-budget" %>
+          </div>
+          <div class="budget-decoration"></div>
+          <div class="budget-decoration"></div>
+          <div class="budget-decoration"></div>
+          <div class="budget-decoration"></div>
+        </div>
+  </div>
+</section>

@@ -1,4 +1,4 @@
-.section-ver-presupuesto{
+.section-crear-presupuesto{
 	& {
 		* {
 			margin: 0;
@@ -6,14 +6,13 @@
 			box-sizing: border-box;
 			font-family: "Montserrat", sans-serif;
 		}
-
+		
 		h1{
 			text-align: center;
 			color: #000e8d;
 			font-size: 1.5rem;
 			margin-top: 1rem;
 		}
-		
 		/* Navbar */
 		.nav-desktop {
 			display: none;
@@ -232,8 +231,16 @@
 		}
 		
 		.budget-title {
-			font-size: 1rem;
+			font-size: 0.8rem;
 			color: #3c3838;
+		}
+		
+		.budget-input {
+			margin-top: 7px;
+			width: 300px;
+			height: 35px;
+			border-radius: 5px;
+			border: 1px solid #000e8d;
 		}
 		
 		.budget-container {
@@ -250,12 +257,6 @@
 		
 		.budget-info {
 			margin-left: 40px;
-			width: 90%;
-		}
-		
-		.budget-description {
-			font-size: 13px;
-			padding-top: 10px;
 			width: 90%;
 		}
 		
@@ -373,6 +374,9 @@
 			.budget-title {
 				margin-top: 30px;
 			}
+			.budget-input {
+				margin-top: 10px;
+			}
 		
 			/* Searchbar */
 			.search-input {
@@ -460,6 +464,9 @@
 				height: 700px;
 				gap: 30px;
 			}
+			.budget-input {
+				width: 400px;
+			}
 		
 			/* Searchbar */
 		
@@ -470,6 +477,10 @@
 		
 			.search-icon {
 				left: 600px;
+			}
+		
+			.total-price {
+				margin-right: 93px;
 			}
 		}		
 	}

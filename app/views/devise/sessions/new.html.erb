@@ -1,46 +1,48 @@
-<%= render 'shared/header' %>
-<main class="login"> 
-<!-- Agregado por carlos -->
-	<h1 class="principal-title">Iniciar sesión</h1>
-	<div class="new-account-cointainer">
-		<%= image_tag 'img/registro/iniciar_sesion.svg', alt:"logo", class:"img-sesion"%>
-		<div class="login-container">
-			<p>¡Bienvenido! ingresá tu método para iniciar sesión</p>
-			<!-- Esta parte no tiene implementacion -->
-			<div class="logo-container">
-				<div>
-					<%= image_tag 'img/logos/google.png', alt:"logo", class:"logo-google"%>
+<section class="section-iniciar-sesion">
+	<%= render 'shared/header' %>
+	<main class="login"> 
+	<!-- Agregado por carlos -->
+		<h1 class="principal-title">Iniciar sesión</h1>
+		<div class="my-account-cointainer">
+			<%= image_tag 'img/registro/iniciar_sesion.svg', alt:"logo", class:"img-sesion"%>
+			<div class="login-container">
+				<p>¡Bienvenido! ingresá tu método para iniciar sesión</p>
+				<!-- Esta parte no tiene implementacion -->
+				<div class="logo-container">
+					<div>
+						<%= image_tag 'img/logos/google.png', alt:"logo", class:"logo-google"%>
+					</div>
+					<div>
+						<%= image_tag 'img/logos/facebook.png', alt:"logo", class:"logo-facebook"%>
+					</div>
 				</div>
-				<div>
-					<%= image_tag 'img/logos/facebook.png', alt:"logo", class:"logo-facebook"%>
-				</div>
+				<!-- fin -->
+				<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+					<div class="email-line">
+						<div class="line"></div>
+						<p>o continuá con tu email</p>
+						<div class="line"></div>
+					</div>
+
+					<div class="field">
+						<%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class:"new-account-input" %>
+					</div>
+
+					<div class="field">
+						<%= f.password_field :password, autocomplete: "current-password" , placeholder: "Password", class:"new-account-input"%>
+					</div>
+
+					<div class="actions">
+						<%= f.submit "Log in" %>
+					</div>
+					<div class="registration-container">
+						<p>¿No tenés cuenta?</p>
+						<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+						<%= link_to "Registrate ahora", new_registration_path(resource_name) %><br />
+						<% end %>
+					</div>
+				<% end %>
 			</div>
-			<!-- fin -->
-			<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-				<div class="email-line">
-					<div class="line"></div>
-					<p>o continuá con tu email</p>
-					<div class="line"></div>
-				</div>
-
-				<div class="field">
-					<%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class:"new-account-input" %>
-				</div>
-
-				<div class="field">
-					<%= f.password_field :password, autocomplete: "current-password" , placeholder: "Password", class:"new-account-input"%>
-				</div>
-
-				<div class="actions">
-					<%= f.submit "Log in" %>
-				</div>
-				<div class="registration-container">
-					<p>¿No tenés cuenta?</p>
-					<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-					<%= link_to "Registrate ahora", new_registration_path(resource_name) %><br />
-					<% end %>
-				</div>
-			<% end %>
 		</div>
-	</div>
-</main>
+	</main>
+</section>
