@@ -213,7 +213,7 @@
 		
 		.budgets {
 			width: 97%;
-			height: 550px;
+			// height: 550px;
 			border: 1px solid rgba(0, 14, 141, 0.2);
 			border-radius: 5px;
 			margin: 10px 5px;
@@ -461,7 +461,7 @@
 				width: 50%;
 				display: flex;
 				flex-direction: column;
-				height: 700px;
+				height: 10vh;
 				gap: 30px;
 			}
 			.budget-input {
