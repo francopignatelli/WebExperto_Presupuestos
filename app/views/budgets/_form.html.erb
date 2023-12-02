@@ -39,12 +39,14 @@
     </div>
   </div>
   <div class="budget-buttons">
-    <% if @budget.id != nil %>
-      <%= link_to "Eliminar", @budget, method: :delete, data: { confirm: "¿Estás seguro de que quieres eliminar este presupuesto?" }, class: "quit-budget" %>
-      <%= form.submit "Guardar", class: "create-budget" %>
+    <% if @budget.id == nil %>
+      <%= form.submit "Guardar presupuesto", class: "create-budget" %>
+			<%= link_to "Volver", budgets_path, class: "quit-budget" %>
+      <%# Este div cierra el de budget-buttons %>
+      </div>
     <% else %>
-      <%= form.submit "Guardar", class: "create-budget" %>
+      <%= form.submit "Guardar presupuesto", class: "create-budget" %>
+      <%# Cierro el if sin cerrar el div ya que lo cierro en edit.html.erb %>
     <% end %>
-  </div>
+    <%# Cierro el form %>
 <% end %>
- <%= button_to "Eliminar", @budget, method: :delete, class: "quit-budget", form: { data: {'turbo-confirm': '¿Estás seguro de que quieres eliminar este presupuesto?'} } %>
