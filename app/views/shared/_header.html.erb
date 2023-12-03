@@ -12,16 +12,19 @@
 					<h1 class="nav__title">Electrohouse</h1>
 
 					<a href="#menu" class="nav__menu">
-						<img src="./assets/menu.svg" class="nav__icon" />
+						<%# <img src="./assets/menu.svg" class="nav__icon" /> %>
+						<%= image_tag 'logo-img/menu.svg', alt:"menu", class: "nav__icon" %>
 					</a>
 
 					<a href="#" class="nav__menu nav__menu--second">
-						<img src="./assets/close.svg" class="nav__icon" />
+						<%# <img src="./assets/close.svg" class="nav__icon" /> %>
+						<%= image_tag 'logo-img/close.svg', alt:"close", class: "nav__icon" %>
 					</a>
 
 					<ul class="dropdown" id="menu">
 						<li class="img-logo">
-							<img src="./img/logos/logo.svg" alt="logo" />
+							<%# <img src="./img/logos/logo.svg" alt="logo" /> %>
+							<%= image_tag 'img/logos/logo.svg', alt:"logo" %>
 						</li>
 
 						<li class="dropdown__list">
@@ -40,7 +43,8 @@
 							<a href="#" class="dropdown__link">
 								<div class="dropdown-categorys">
 									<span class="dropdown__span">Categorías</span>
-									<img src="./assets/down.svg" class="dropdown__arrow" />
+									<%# <img src="./assets/down.svg" class="dropdown__arrow" /> %>
+									<%= image_tag 'logo-img/down.svg', class: "dropdown__arrow" %>
 								</div>
 
 								<input type="checkbox" class="dropdown__check" />
