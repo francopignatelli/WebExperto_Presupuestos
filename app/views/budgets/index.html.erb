@@ -6,19 +6,29 @@
     <!-- Search bar -->
     <div class="search-container">
       <div class="input-search-container">
-        <%= image_tag 'img/icons/search.svg', alt:"search", class:"search-icon" %>
-        <input type="text" class="search-input" placeholder="" />
-      </div>
+      <%= image_tag 'img/icons/search.svg', alt: "search", class: "search-icon" %>
+      <%= form_tag(budgets_path, method: :get, class: "search-form") do %>
+        <%= text_field_tag :search, params[:search], class: "search-input", placeholder: "Buscar presupuestos" %>
+        <%= submit_tag "Buscar" %>
+      <% end %>
     </div>
-  <!-- Presupuestos -->
-        <div class="budget-container">
-          <% @budgets.each do |budget| %>
-            <%= render budget %>
-          <% end %>
-          <div class="budget-buttons">
-            <button class="quit-budget" disabled>Quitar presupuesto</button>
-            <%= link_to "Crear presupuesto", new_budget_path, class: "create-budget" %>
-          </div>
-        </div>
   </div>
+  <!-- Presupuestos -->
+    <div class="budget-container">
+      <% if @budgets.present? %>
+        <% @budgets.each do |budget| %>
+          <%= render budget %>
+        <% end %>
+      <% else %>
+        <p>No se encontraron presupuestos.</p>
+      <% end %>
+
+      <div class="budget-buttons">
+        <%= link_to "Crear presupuesto", new_budget_path, class: "create-budget" %>
+      </div>
+      <div class="budget-decoration"></div>
+      <div class="budget-decoration"></div>
+      <div class="budget-decoration"></div>
+      <div class="budget-decoration"></div>
+    </div>
 </section>
