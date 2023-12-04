@@ -230,12 +230,14 @@
 		}
 		
 		.budget {
-			background-color: #000e8d; /* Azul */
+			// background-color: #000e8d; /* Azul */
 			height: 120px;
 			border-radius: 5px;
 			display: flex;
 			justify-content: space-between;
 			padding: 10px;
+			background: rgb(179,55,166);
+			background: linear-gradient(90deg, rgba(179,55,166,0.7847514005602241) 17%, rgba(0,14,141,1) 30%);
 			/* position: relative; */
 		}
 		
