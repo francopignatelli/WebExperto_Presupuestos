@@ -186,13 +186,24 @@
 			height: 100px;
 			background-color: #f32ddf;
 			border-radius: 5px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none;
+			color: white;
+		
+			transition: background-color 0.3s ease;
+		}
+		
+		.my-account-budgets:hover {
+			background-color: #a52ed1; /* Cambia el color al pasar el cursor sobre el botón */
 		}
 		
 		.my-account-budgets p {
 			text-align: center;
-			padding-top: 40px;
-			color: white;
-			font-weight: 400;
+			// padding-top: 40px;
+			// color: white;
+			// font-weight: 400;
 		}
 		
 		form div {
@@ -200,6 +211,7 @@
 			flex-direction: column;
 			margin: 2px 0px;
 			gap: 10px;
+			align-items: center;
 		}
 		
 		form div label {
@@ -230,6 +242,28 @@
 			background-color: white;
 			margin: 20px 0px;
 		}
+		
+		input[type="email"] {
+			width: 400px;
+			height: 40px;
+			border: 1px solid #000e8d;
+			border-radius: 5px;
+		}
+		
+		input[type="text"] {
+			width: 400px;
+			height: 40px;
+			border: 1px solid #000e8d;
+			border-radius: 5px;
+		}
+		
+		input[type="password"] {
+			width: 400px;
+			height: 40px;
+			border: 1px solid #000e8d;
+			border-radius: 5px;
+		}
+
 		.form-buttons input[type="submit"]:first-child {
 			background-color: #000e8d;
 			color: white;
@@ -269,7 +303,23 @@
 				align-items: center;
 				text-decoration: none;
 			}
-		
+			
+			.back-logout {
+				color: #000e8d;
+				width: 140px;
+				font-size: 1rem;
+				padding: 5px 20px;
+				border: 1px solid #000e8d;
+				border-radius: 50px;
+				background-color: white;
+				margin: 20px 0px;
+				display: flex;
+				font-weight: 600;
+				justify-content: center;
+				align-items: center;
+				text-decoration: none;
+			}
+
 			/* Form */
 			.my-account-budgets {
 				width: 60%;
@@ -295,7 +345,7 @@
 				margin-top: 30px;
 				display: flex;
 				flex-direction: row;
-				gap: 20px;
+				gap: 30px;
 			}
 		
 			.form-buttons {
