@@ -3,7 +3,7 @@
 	<div class="my-account-cointainer">
 		<h1>Mi cuenta</h1>
 		<%= link_to budgets_path, class: "my-account-budgets" do %>
-			<div class="my-account-budgets">
+			<div>
 				<p>Mira tus presupuestos</p>
 			</div>
 		<% end %>
@@ -77,8 +77,8 @@
 				
 				<div class="form-buttons">
 					<%= f.submit "Update" %>
-					<%= link_to "Back", :root, class: "back-button-mi-cuenta"%>
-					<%= link_to 'Logout', destroy_user_session_path, method: :delete , class: "back-button-mi-cuenta" %>
+					<%= link_to "Back", :root, class: "back-logout"%>
+					<%= link_to 'Logout', destroy_user_session_path, method: :delete , class: "back-logout" %>
 				</div>
 			<% end %>
 		<%# </form> %>
