@@ -2,10 +2,11 @@
     <%= render 'shared/header'%>
     <p style="color: green"><%= notice %></p>
 
-    <h1>Ver presupuesto</h1>
+    <h1>Ver presupuesto</h1>      
+    <%= button_to "Eliminar", @budget, method: :delete, class: "quit-budget", form: { data: {'turbo-confirm': '¿Estás seguro de que quieres eliminar este presupuesto?'} } %>
+
     <%= render "form", budget: @budget %>
     <%# Este boton esta aca afuera para no verse afectado por el form %>
-        <%= button_to "Eliminar", @budget, method: :delete, class: "quit-budget", form: { data: {'turbo-confirm': '¿Estás seguro de que quieres eliminar este presupuesto?'} } %>
     <%# Este div cierra budget-buttons de _form.html.erb %>
-    </div>
+    
 </section>
