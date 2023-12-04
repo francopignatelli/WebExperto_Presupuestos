@@ -3,7 +3,7 @@
 	<div class="my-account-cointainer">
 		<h1>Mi cuenta</h1>
 		<%= link_to budgets_path, class: "my-account-budgets" do %>
-			<div class="my-account-budgets">
+			<div>
 				<p>Mira tus presupuestos</p>
 			</div>
 		<% end %>
@@ -13,74 +13,74 @@
 				<%= link_to "Mira tus presupuestos", :budgets, class: "my-account-budgets" %>
 			<%# </p>
 		</div>  %>
-		<form action="">
+		<%# <form action=""> %>
 			<div class="form-container mi-cuenta-form-div">
 				<div class="form-column-1">
-				<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-				<%= render "devise/shared/error_messages", resource: resource %>
-					<div>					
-							<label for="">
-								<%= f.label :name %><br />
-								<%= f.text_field :name, autofocus: true %>
-							</label>
+					<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+						<%= render "devise/shared/error_messages", resource: resource %>
+						<div>					
+								<label for="">
+									<label>Nombre</label><br />
+									<%= f.text_field :name, autofocus: true %>
+								</label>
+						</div>
+						<div>					
+								<label for="">
+									<label>Apellido</label><br />
+									<%= f.text_field :last_name %>
+								</label>
+						</div>
+						<div>					
+								<label for="">
+									<label>Contraseña actual</label><i>(para confirmar cambios)</i><br />
+									<%= f.password_field :current_password, autocomplete: "current-password" %>
+								</label>
+						</div>
+						<div>					
+								<label for="">
+									<label>Nueva contraseña</label><i>(Dejar en blanco si no desea cambiar)</i><br />
+									<%= f.password_field :password, autocomplete: "new-password" %>
+									<% if @minimum_password_length %>
+										<br />
+										<em><%= @minimum_password_length %> caracteres minimos</em>
+									<% end %>
+								</label>
+						</div>
 					</div>
-					<div>					
-							<label for="">
-								<%= f.label :last_name %><br />
-								<%= f.text_field :last_name %>
-							</label>
-					</div>
-					<div>					
-							<label for="">
-								<%= f.label :current_password %><br />
-								<%= f.password_field :current_password, autocomplete: "current-password" %>
-							</label>
-					</div>
-					<div>					
-							<label for="">
-								<%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-								<%= f.password_field :password, autocomplete: "new-password" %>
-								<% if @minimum_password_length %>
-									<br />
-									<em><%= @minimum_password_length %> characters minimum</em>
-								<% end %>
-							</label>
+					<div class="form-column-2">
+						<div>					
+								<label for="">
+									<label>Email</label><br />
+									<%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+								</label>
+						</div>
+						<div>					
+								<label for="">			
+									<label>Direccion</label><br />
+									<%= f.text_field :address %>
+								</label>
+						</div>
+						<div>					
+								<label for="">			
+									<label>Telefono</label><br />
+									<%= f.text_field :phone %>
+								</label>
+						</div>
+						<div>					
+								<label for="">			
+									<label>Repetir contraseña</label><br />
+									<%= f.password_field :current_password, autocomplete: "current-password" %>
+								</label>
+						</div>				
 					</div>
 				</div>
-				<div class="form-column-2">
-					<div>					
-							<label for="">
-								<%= f.label :email %><br />
-								<%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-							</label>
-					</div>
-					<div>					
-							<label for="">			
-								<%= f.label :address %><br />
-								<%= f.text_field :address %>
-							</label>
-					</div>
-					<div>					
-							<label for="">			
-								<%= f.label :phone %><br />
-								<%= f.text_field :phone %>
-							</label>
-					</div>
-					<div>					
-							<label for="">			
-								<%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-								<%= f.password_field :current_password, autocomplete: "current-password" %>
-							</label>
-					</div>				
+				
+				<div class="form-buttons">
+					<%= f.submit "Update" %>
+					<%= link_to "Back", :root, class: "back-logout"%>
+					<%= link_to 'Logout', destroy_user_session_path, method: :delete , class: "back-logout" %>
 				</div>
-			</div>
-			
-			<div class="form-buttons">
-				<%= f.submit "Update" %>
-				<%= link_to "Back", :root, class: "back-button-mi-cuenta"%>
-				 <%= link_to 'Logout', destroy_user_session_path, method: :delete , class: "back-button-mi-cuenta" %>
-			</div>
 			<% end %>
-		</form>
+		<%# </form> %>
 	</div>
 </section>
