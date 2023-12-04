@@ -311,6 +311,9 @@
 			margin-top: 50px;
 			display: flex;
 			justify-content: center;
+			flex-direction: row-reverse;
+			font-size: .8rem;
+			text-decoration: none;
 			gap: 10px;
 		}
 		
@@ -325,6 +328,8 @@
 		}
 		
 		.quit-budget {
+			text-align: center;
+			text-decoration: none;
 			border-radius: 50px;
 			width: 160px;
 			height: 35px;
@@ -332,6 +337,7 @@
 			background-color: #ffffff;
 			color: #000e8d;
 			font-weight: 600;
+			padding: 10px;
 		}
 		
 		/* TABLET */
@@ -423,7 +429,7 @@
 			}
 			.budget-buttons {
 				margin-top: 20px;
-				justify-content: flex-end;
+				
 			}
 		}
 		
