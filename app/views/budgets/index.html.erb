@@ -7,9 +7,9 @@
     <div class="search-container">
       <div class="input-search-container">
       <%= image_tag 'img/icons/search.svg', alt: "search", class: "search-icon" %>
-      <%= form_tag(budgets_path, method: :get, class: "search-form") do %>
+      <%= form_tag(budgets_path, method: :get, class: "budget-search-form") do %>
         <%= text_field_tag :search, params[:search], class: "search-input", placeholder: "Buscar presupuestos" %>
-        <%= submit_tag "Buscar" %>
+        <%= submit_tag "Buscar", class: "create-budget"%>
       <% end %>
     </div>
   </div>
@@ -26,9 +26,5 @@
       <div class="budget-buttons">
         <%= link_to "Crear presupuesto", new_budget_path, class: "create-budget" %>
       </div>
-      <div class="budget-decoration"></div>
-      <div class="budget-decoration"></div>
-      <div class="budget-decoration"></div>
-      <div class="budget-decoration"></div>
     </div>
 </section>
