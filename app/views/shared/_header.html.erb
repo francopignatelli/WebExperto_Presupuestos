@@ -8,62 +8,9 @@
 			</nav>
 	<!-- Navbar mobile -->
 	<nav class="nav">
-				<div class="nav__container">
-					<h1 class="nav__title">Electrohouse</h1>
-
-					<a href="#menu" class="nav__menu">
-						<img src="./assets/menu.svg" class="nav__icon" />
-					</a>
-
-					<a href="#" class="nav__menu nav__menu--second">
-						<img src="./assets/close.svg" class="nav__icon" />
-					</a>
-
-					<ul class="dropdown" id="menu">
-						<li class="img-logo">
-							<img src="./img/logos/logo.svg" alt="logo" />
-						</li>
-
-						<li class="dropdown__list">
-							<a href="#" class="dropdown__link">
-								<span class="dropdown__span">Iniciar sesión</span>
-							</a>
-						</li>
-
-						<li class="dropdown__list">
-							<a href="#" class="dropdown__link">
-								<span class="dropdown__span">Registrarme</span>
-							</a>
-						</li>
-
-						<li class="dropdown__list">
-							<a href="#" class="dropdown__link">
-								<div class="dropdown-categorys">
-									<span class="dropdown__span">Categorías</span>
-									<img src="./assets/down.svg" class="dropdown__arrow" />
-								</div>
-
-								<input type="checkbox" class="dropdown__check" />
-							</a>
-
-							<div class="dropdown__content">
-								<ul class="dropdown__sub">
-									<li class="dropdown__li">
-										<a href="#" class="dropdown__anchor">Heladeras</a>
-									</li>
-									<li class="dropdown__li">
-										<a href="#" class="dropdown__anchor">Televisores</a>
-									</li>
-									<li class="dropdown__li">
-										<a href="#" class="dropdown__anchor">Aires</a>
-									</li>
-									<li class="dropdown__li">
-										<a href="#" class="dropdown__anchor">Lavarropas</a>
-									</li>
-								</ul>
-							</div>
-						</li>
-					</ul>
-				</div>
+		<div class="nav__container">
+			<h1 class="nav__title">Electrohouse</h1>
+			<%= link_to "<--", :root, class: "back-button" %>
+		</div>
 	</nav>
 </header>

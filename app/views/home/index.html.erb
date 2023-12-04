@@ -1,309 +1,311 @@
 <%= render 'shared/header_home' %>
-    <!-- Carrousel -->
-    <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-            <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="0"
-                class="active"
-                aria-current="true"
-                aria-label="Slide 1"
-            ></button>
-            <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"
-            ></button>
-            <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"
-            ></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <%= image_tag 'img/carrousel/b1.svg', alt:"freezer", class:"d-block w-100"%>
-            </div>
-            <div class="carousel-item">
-                <%= image_tag 'img/carrousel/b2.svg', alt:"freezer", class:"d-block w-100"%>
-            </div>
-        </div>
-        <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev"
-        >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next"
-        >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+<section class="section-index">
+		<!-- Carrousel -->
+		<div id="carouselExampleIndicators" class="carousel slide">
+			<div class="carousel-indicators">
+				<button
+					type="button"
+					data-bs-target="#carouselExampleIndicators"
+					data-bs-slide-to="0"
+					class="active"
+					aria-current="true"
+					aria-label="Slide 1"
+				></button>
+				<button
+					type="button"
+					data-bs-target="#carouselExampleIndicators"
+					data-bs-slide-to="1"
+					aria-label="Slide 2"
+				></button>
+				<button
+					type="button"
+					data-bs-target="#carouselExampleIndicators"
+					data-bs-slide-to="2"
+					aria-label="Slide 3"
+				></button>
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<%= image_tag 'img/carrousel/b1.svg', alt:"freezer", class:"d-block w-100"%>
+				</div>
+				<div class="carousel-item">
+					<%= image_tag 'img/carrousel/b2.svg', alt:"freezer", class:"d-block w-100"%>
+				</div>
+			</div>
+			<button
+				class="carousel-control-prev"
+				type="button"
+				data-bs-target="#carouselExampleIndicators"
+				data-bs-slide="prev"
+			>
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button
+				class="carousel-control-next"
+				type="button"
+				data-bs-target="#carouselExampleIndicators"
+				data-bs-slide="next"
+			>
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
 
-    <!-- Nuestros productos -->
-    <div class="product-container">
-        <h1>Nuestros productos</h1>
-        <div class="p-container">
-						<%= image_tag 'img/cards/freezers/freezer-banner.svg', alt:"freezer", class:"image-banner"%>
-						<div class="swiper" id="product-carrousel-1">
-							<div class="cards-container swiper-wrapper">
-									<div class="p-card swiper-slide">
-											<%= image_tag 'img/cards/freezers/freezer1.png', alt:"freezer", class:""%>
-											<p class="card-title">Heladera con freezer Gafa Blanca 326 lts</p>
-											<div class="sales-container">
-													<span>$340.999</span>
-													<span>5% OFF</span>
-											</div>
-											<span class="price">$295.999</span>
-									</div>
-									<div class="p-card swiper-slide">
-											<%= image_tag 'img/cards/freezers/freezer2.svg', alt:"freezer", class:""%>
-											<p class="card-title">Heladera con freezer Gafa Plata 374 lts</p>
-											<div class="sales-container">
-													<span>$333.999</span>
-													<span>5% OFF</span>
-											</div>
-											<span class="price">$311.999</span>
-									</div>
-									<div class="p-card swiper-slide">
-											<%= image_tag 'img/cards/freezers/freezer3.svg', alt:"freezer", class:""%>
-											<p class="card-title">Heladera cycle defrost HDR370F11S</p>
+		<!-- Nuestros productos -->
+		<div class="product-container">
+			<h1>Nuestros productos</h1>
+			<div class="p-container">
+							<%= image_tag 'img/cards/freezers/freezer-banner.svg', alt:"freezer", class:"banner"%>
+							<div class="swiper" id="product-carrousel-1">
+								<div class="cards-container">
+									<div class="p-card">
+												<%= image_tag 'img/cards/freezers/freezer1.png', alt:"freezer" %>
+												<p class="card-title">Heladera con freezer Gafa Blanca 326 lts</p>
+												<div class="sales-container">
+														<span>$340.999</span>
+														<span>5% OFF</span>
+												</div>
+												<span class="price">$295.999</span>
+										</div>
+										<div class="p-card">
+												<%= image_tag 'img/cards/freezers/freezer2.svg', alt:"freezer", class:""%>
+												<p class="card-title">Heladera con freezer Gafa Plata 374 lts</p>
+												<div class="sales-container">
+														<span>$333.999</span>
+														<span>5% OFF</span>
+												</div>
+												<span class="price">$311.999</span>
+										</div>
+										<div class="p-card">
+												<%= image_tag 'img/cards/freezers/freezer3.svg', alt:"freezer", class:""%>
+												<p class="card-title">Heladera cycle defrost HDR370F11S</p>
 
-											<div class="sales-container">
-													<span>$600.999</span>
-													<span>5% OFF</span>
-											</div>
-											<span class="price">$494.999</span>
-									</div>
-									<div class="p-card swiper-slide">
-											<%= image_tag 'img/cards/freezers/freezer1.png', alt:"freezer", class:""%>
-											<p class="card-title">Heladera con freezer Gafa Blanca 326lts</p>
-											<div class="sales-container">
-													<span>$340.999</span>
-													<span>5% OFF</span>
-											</div>
-											<span class="price">$295.999</span>
-									</div>
-							</div>
-							<script>
-									document.addEventListener("DOMContentLoaded", () => {
-											const productCarousel1 = new Swiper(".swiper", {
-													slidesPerView:4,
-													
-											}); 
-									});
-							</script>
-                            
-						</div>	
-        </div>
-        <!-- Lavarropas -->
-        <div class="p-container">
-					<%= image_tag 'img/cards/lavarropas/lavarropas-banner.svg', alt:"freezer", class:"image-banner"%>
-            <div class="swiper cards-container">
-							<div class="cards-container swiper-wrapper">
+												<div class="sales-container">
+														<span>$600.999</span>
+														<span>5% OFF</span>
+												</div>
+												<span class="price">$494.999</span>
+										</div>
 										<div class="p-card swiper-slide">
-												<%= image_tag 'img/cards/lavarropas/lavarropas1.svg', alt:"freezer", class:""%>
-												<p class="card-title">Lavarropas automático Drean Next 6kg</p>
+												<%= image_tag 'img/cards/freezers/freezer1.png', alt:"freezer", class:""%>
+												<p class="card-title">Heladera con freezer Gafa Blanca 326lts</p>
+												<div class="sales-container">
+														<span>$340.999</span>
+														<span>5% OFF</span>
+												</div>
+												<span class="price">$295.999</span>
+										</div>
+								</div>
+								<script>
+										document.addEventListener("DOMContentLoaded", () => {
+												const productCarousel1 = new Swiper(".swiper", {
+														slidesPerView:4,
+														
+												}); 
+										});
+								</script>
+								
+							</div>	
+			</div>
+			<!-- Lavarropas -->
+			<div class="p-container">
+						<%= image_tag 'img/cards/lavarropas/lavarropas-banner.svg', alt:"freezer", class:"banner"%>
+				<div class="swiper cards-container">
+								<div class="cards-container swiper-wrapper">
+											<div class="p-card swiper-slide">
+													<%= image_tag 'img/cards/lavarropas/lavarropas1.svg', alt:"freezer", class:""%>
+													<p class="card-title">Lavarropas automático Drean Next 6kg</p>
+													<div class="sales-container">
+															<span>$350.999</span>
+															<span>5% OFF</span>
+													</div>
+													<span class="price">$300.999</span>
+											</div>
+											<div class="p-card swiper-slide">
+													<%= image_tag 'img/cards/lavarropas/lavarropas2.svg', alt:"freezer", class:""%>
+													<p class="card-title">Lavarropas Samsung 6,5kg de 220V</p>
+													<div class="sales-container">
+															<span>$750.999</span>
+															<span>5% OFF</span>
+													</div>
+													<span class="price">$660.999</span>
+											</div>
+											<div class="p-card swiper-slide">
+													<%= image_tag 'img/cards/lavarropas/lavarropas3.svg', alt:"freezer", class:""%>
+													<p class="card-title">Lavarropas 9.5Kg Inverter de 220V<</p>
+
+													<div class="sales-container">
+															<span>$600.999</span>
+															<span>5% OFF</span>
+													</div>
+													<span class="price">$500.999</span>
+											</div>
+											<div class="p-card swiper-slide">
+													<%= image_tag 'img/cards/lavarropas/lavarropas4.svg', alt:"freezer", class:""%>
+													<p class="card-title">Lavarropas Carga Frontal Electrolux</p>
+													<div class="sales-container">
+															<span>$600.999</span>
+															<span>5% OFF</span>
+													</div>
+													<span class="price">$500.999</span>
+											</div>
+									</div>		
+									<script>
+										document.addEventListener("DOMContentLoaded", () => {
+												const productCarousel1 = new Swiper(".swiper", {
+														slidesPerView:4,
+														
+												}); 
+										});
+								</script>
+				</div>
+			</div>
+			<!-- Promociones -->
+			<div class="promo-container">
+				<div class="promo-card">
+									<%= image_tag 'img/promociones/promocion1.svg', alt:"promocion"%>
+					<p>Contamos con los mejores colchones, sommiers y muebles.</p>
+				</div>
+				<div class="promo-card">
+					<%= image_tag 'img/promociones/promocion2.svg', alt:"promocion"%>
+					<p>Ofrecemos variedad en bicicletas fijas, mancuernas y pelotas.</p>
+				</div>
+				<div class="promo-card">
+					<%= image_tag 'img/promociones/promocion3.svg', alt:"promocion"%>
+					<p>
+						Tenemos las mejores Herramientas, tornillos, llaves y martillos.
+					</p>
+				</div>
+			</div>
+
+			<!-- Aires -->
+			<div class="p-container">
+							<%= image_tag 'img/cards/aires/aires-banner.svg', alt:"banner", class:"banner"%>
+				<div class="cards-container swiper ">
+								<div class="cards-container swiper-wrapper">
+										<div class="p-card swiper-slide">
+												<%= image_tag 'img/cards/aires/aire1.png', alt:"aire", class:""%>
+												<p class="card-title">Aire Acondicionado Split 2900 Frigorías</p>
+												<div class="sales-container">
+														<span>$550.999</span>
+														<span>5% OFF</span>
+												</div>
+												<span class="price">$460.999</span>
+										</div>
+										<div class="p-card swiper-slide">
+												<%= image_tag 'img/cards/aires/aire2.png', alt:"aire", class:""%>
+												<p class="card-title">Aire acondicionado Philco split</p>
+												<div class="sales-container">
+														<span>$530.999</span>
+														<span>5% OFF</span>
+												</div>
+												<span class="price">$485.999</span>
+										</div>
+										<div class="p-card swiper-slide">
+												<%= image_tag 'img/cards/aires/aire3.png', alt:"aire", class:""%>
+												<p class="card-title">LG Art Cool split 3000 frigorías XXJ32</p>
+												<div class="sales-container">
+														<span>$900.999</span>
+														<span>5% OFF</span>
+												</div>
+												<span class="price">$850.999</span>
+										</div>
+										<div class="p-card swiper-slide">
+												<%= image_tag 'img/cards/aires/aire4.png', alt:"aire", class:""%>
+												<p class="card-title">Aire Acondicionado Split Inverter</p>
+												<div class="sales-container">
+														<span>$635.999</span>
+														<span>5% OFF</span>
+												</div>
+							<span class="price">$535.999</span>
+						</div>
+								</div>	
+								<script>
+										document.addEventListener("DOMContentLoaded", () => {
+												const productCarousel1 = new Swiper(".swiper", {
+														slidesPerView:4,
+														
+												}); 
+										});
+								</script>
+				</div>
+			</div>
+			<!-- Televisores -->
+			<div class="p-container">
+				<%= image_tag 'img/cards/televisores/televisores-banner.svg', alt:"banner", class:"banner"%>
+				<div class="cards-container swiper ">
+								<div class="cards-container swiper-wrapper">
+										<div class="p-card swiper-slide">
+												<%= image_tag 'img/cards/televisores/tele1.png', alt:"televisor", class:""%>
+												<p class="card-title">Smart Tv LG Ai Thinq Webos 22 4k</p>
+												<div class="sales-container">
+														<span>$600.999</span>
+														<span>5% OFF</span>
+												</div>
+												<span class="price">$510.999</span>
+										</div>
+										<div class="p-card swiper-slide">
+												<%= image_tag 'img/cards/televisores/tele2.png', alt:"televisor", class:""%>
+												<p class="card-title">Smart Tv LG Nanocell Ai 4k 50 3344</p>
+												<div class="sales-container">
+														<span>$450.999</span>
+														<span>5% OFF</span>
+												</div>
+												<span class="price">$390.999</span>
+										</div>
+										<div class="p-card swiper-slide">
+												<%= image_tag 'img/cards/televisores/tele3.png', alt:"televisor", class:""%>
+												<p class="card-title">Smart TV Kodak LED 4K 60" 220V</p>
+												<div class="sales-container">
+														<span>$450.999</span>
+														<span>5% OFF</span>
+												</div>
+												<span class="price">$375.999</span>
+										</div>
+										<div class="p-card swiper-slide">
+												<%= image_tag 'img/cards/televisores/tele4.png', alt:"televisor", class:""%>
+												<p class="card-title">Smart Tv Samsung 2021 Uhd 4k Tizen Led 50</p>
 												<div class="sales-container">
 														<span>$350.999</span>
 														<span>5% OFF</span>
 												</div>
-												<span class="price">$300.999</span>
+												<span class="price">$250.999</span>
 										</div>
-										<div class="p-card swiper-slide">
-												<%= image_tag 'img/cards/lavarropas/lavarropas2.svg', alt:"freezer", class:""%>
-												<p class="card-title">Lavarropas Samsung 6,5kg de 220V</p>
-												<div class="sales-container">
-														<span>$750.999</span>
-														<span>5% OFF</span>
-												</div>
-												<span class="price">$660.999</span>
-										</div>
-										<div class="p-card swiper-slide">
-												<%= image_tag 'img/cards/lavarropas/lavarropas3.svg', alt:"freezer", class:""%>
-												<p class="card-title">Lavarropas 9.5Kg Inverter de 220V<</p>
+									</div>
+				</div>
+			</div>
+		</div>
+		<!-- Google Map -->
+		<div class="electrohouse-map">
+			<iframe
+				class="e-map"
+				width="360"
+				height="194"
+				style="border: 0"
+				loading="lazy"
+				allowfullscreen
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387279.0558246505!2d-74.25908989999999!3d40.6976701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2594a2d50b387%3A0x9be8894c252f6340!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1624337884538!5m2!1sen!2sin"
+			>
+			</iframe>
+		</div>
 
-												<div class="sales-container">
-														<span>$600.999</span>
-														<span>5% OFF</span>
-												</div>
-												<span class="price">$500.999</span>
-										</div>
-										<div class="p-card swiper-slide">
-												<%= image_tag 'img/cards/lavarropas/lavarropas4.svg', alt:"freezer", class:""%>
-												<p class="card-title">Lavarropas Carga Frontal Electrolux</p>
-												<div class="sales-container">
-														<span>$600.999</span>
-														<span>5% OFF</span>
-												</div>
-												<span class="price">$500.999</span>
-										</div>
-								</div>		
-								<script>
-									document.addEventListener("DOMContentLoaded", () => {
-											const productCarousel1 = new Swiper(".swiper", {
-													slidesPerView:4,
-													
-											}); 
-									});
-							</script>
-            </div>
-        </div>
-        <!-- Promociones -->
-        <div class="promo-container">
-            <div class="promo-card">
-								<%= image_tag 'img/promociones/promocion1.svg', alt:"promocion"%>
-                <p>Contamos con los mejores colchones, sommiers y muebles.</p>
-            </div>
-            <div class="promo-card">
-                <%= image_tag 'img/promociones/promocion2.svg', alt:"promocion"%>
-                <p>Ofrecemos variedad en bicicletas fijas, mancuernas y pelotas.</p>
-            </div>
-            <div class="promo-card">
-                <%= image_tag 'img/promociones/promocion3.svg', alt:"promocion"%>
-                <p>
-                    Tenemos las mejores Herramientas, tornillos, llaves y martillos.
-                </p>
-            </div>
-        </div>
-
-        <!-- Aires -->
-        <div class="p-container">
-						<%= image_tag 'img/cards/aires/aires-banner.svg', alt:"banner", class:"banner"%>
-            <div class="cards-container swiper ">
-							<div class="cards-container swiper-wrapper">
-									<div class="p-card swiper-slide">
-											<%= image_tag 'img/cards/aires/aire1.png', alt:"aire", class:""%>
-											<p class="card-title">Aire Acondicionado Split 2900 Frigorías</p>
-											<div class="sales-container">
-													<span>$550.999</span>
-													<span>5% OFF</span>
-											</div>
-											<span class="price">$460.999</span>
-									</div>
-									<div class="p-card swiper-slide">
-											<%= image_tag 'img/cards/aires/aire2.png', alt:"aire", class:""%>
-											<p class="card-title">Aire acondicionado Philco split</p>
-											<div class="sales-container">
-													<span>$530.999</span>
-													<span>5% OFF</span>
-											</div>
-											<span class="price">$485.999</span>
-									</div>
-									<div class="p-card swiper-slide">
-											<%= image_tag 'img/cards/aires/aire3.png', alt:"aire", class:""%>
-											<p class="card-title">LG Art Cool split 3000 frigorías XXJ32</p>
-											<div class="sales-container">
-													<span>$900.999</span>
-													<span>5% OFF</span>
-											</div>
-											<span class="price">$850.999</span>
-									</div>
-									<div class="p-card swiper-slide">
-											<%= image_tag 'img/cards/aires/aire4.png', alt:"aire", class:""%>
-											<p class="card-title">Aire Acondicionado Split Inverter</p>
-											<div class="sales-container">
-													<span>$635.999</span>
-													<span>5% OFF</span>
-											</div>
-                    	<span class="price">$535.999</span>
-                	</div>
-							</div>	
-							<script>
-									document.addEventListener("DOMContentLoaded", () => {
-											const productCarousel1 = new Swiper(".swiper", {
-													slidesPerView:4,
-													
-											}); 
-									});
-							</script>
-            </div>
-        </div>
-        <!-- Televisores -->
-        <div class="p-container">
-            <%= image_tag 'img/cards/televisores/televisores-banner.svg', alt:"banner", class:"banner"%>
-            <div class="cards-container swiper ">
-							<div class="cards-container swiper-wrapper">
-									<div class="p-card swiper-slide">
-											<%= image_tag 'img/cards/televisores/tele1.png', alt:"televisor", class:""%>
-											<p class="card-title">Smart Tv LG Ai Thinq Webos 22 4k</p>
-											<div class="sales-container">
-													<span>$600.999</span>
-													<span>5% OFF</span>
-											</div>
-											<span class="price">$510.999</span>
-									</div>
-									<div class="p-card swiper-slide">
-											<%= image_tag 'img/cards/televisores/tele2.png', alt:"televisor", class:""%>
-											<p class="card-title">Smart Tv LG Nanocell Ai 4k 50 3344</p>
-											<div class="sales-container">
-													<span>$450.999</span>
-													<span>5% OFF</span>
-											</div>
-											<span class="price">$390.999</span>
-									</div>
-									<div class="p-card swiper-slide">
-											<%= image_tag 'img/cards/televisores/tele3.png', alt:"televisor", class:""%>
-											<p class="card-title">Smart TV Kodak LED 4K 60" 220V</p>
-											<div class="sales-container">
-													<span>$450.999</span>
-													<span>5% OFF</span>
-											</div>
-											<span class="price">$375.999</span>
-									</div>
-									<div class="p-card swiper-slide">
-											<%= image_tag 'img/cards/televisores/tele4.png', alt:"televisor", class:""%>
-											<p class="card-title">Smart Tv Samsung 2021 Uhd 4k Tizen Led 50</p>
-											<div class="sales-container">
-													<span>$350.999</span>
-													<span>5% OFF</span>
-											</div>
-											<span class="price">$250.999</span>
-									</div>
-								</div>
-            </div>
-        </div>
-    </div>
-    <!-- Google Map -->
-    <div class="electrohouse-map">
-        <iframe
-            class="e-map"
-            width="360"
-            height="194"
-            style="border: 0"
-            loading="lazy"
-            allowfullscreen
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387279.0558246505!2d-74.25908989999999!3d40.6976701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2594a2d50b387%3A0x9be8894c252f6340!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1624337884538!5m2!1sen!2sin"
-        >
-        </iframe>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-				<%= image_tag 'img/logos/logo-white.svg', alt:"logo", class:""%>
-        <div class="client-attention">
-            <p>Atención al cliente</p>
-            <p>0800 122 0338</p>
-            <p>LU-VI de 9:00 a 18:00</p>
-            <p>SA de 9:00 a 13:00</p>
-            <p>contacto@electrohouse.com</p>
-        </div>
-        <div class="contact-us">
-            <p>Venta telefónica</p>
-            <p>0810 333 3728</p>
-            <p>LU-VI de 9:00 a 18:00</p>
-            <p>SA de 9:00 a 13:00</p>
-            <p>contacto@electrohouse.com</p>
-        </div>
-    </footer>
+		<!-- Footer -->
+		<footer>
+					<%= image_tag 'img/logos/logo-white.svg', alt:"logo", class:""%>
+			<div class="client-attention">
+				<p>Atención al cliente</p>
+				<p>0800 122 0338</p>
+				<p>LU-VI de 9:00 a 18:00</p>
+				<p>SA de 9:00 a 13:00</p>
+				<p>contacto@electrohouse.com</p>
+			</div>
+			<div class="contact-us">
+				<p>Venta telefónica</p>
+				<p>0810 333 3728</p>
+				<p>LU-VI de 9:00 a 18:00</p>
+				<p>SA de 9:00 a 13:00</p>
+				<p>contacto@electrohouse.com</p>
+			</div>
+		</footer>
+	</section>
