@@ -2,7 +2,6 @@
   <% if budget.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(budget.errors.count, "error") %> prohibited this budget from being saved:</h2>
-
       <ul>
         <% budget.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -39,14 +38,7 @@
     </div>
   </div>
   <div class="budget-buttons">
-    <% if @budget.id == nil %>
-      <%= form.submit "Guardar presupuesto", class: "create-budget" %>
-			<%= link_to "Volver", budgets_path, class: "quit-budget" %>
-      <%# Este div cierra el de budget-buttons %>
-      </div>
-    <% else %>
-      <%= form.submit "Guardar presupuesto", class: "create-budget" %>
-      <%# Cierro el if sin cerrar el div ya que lo cierro en edit.html.erb %>
-    <% end %>
-    <%# Cierro el form %>
+    <%= form.submit "Guardar presupuesto", class: "create-budget" %>
+		<%= link_to "Volver", budgets_path, class: "quit-budget" %>
+  </div>
 <% end %>
