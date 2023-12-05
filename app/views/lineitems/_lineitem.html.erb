@@ -22,7 +22,8 @@
                   <%= lineitem.quantity %>
                 </div>
                 <%= number_to_currency(lineitem.product.price, unit: '$', precision: 2, delimiter: ',', separator: '.1') %> 
-              </div>
+            </div>
+            <%= link_to "Show this product", lineitem %>
         </div>
         
   </div>
