@@ -328,16 +328,20 @@
 		}
 
 		.delete-budget {
-			border-radius: 50px;
-			width:  21px;
-			height: 21px;
-			color: #000e8d;
+			// border-radius: 50px;
+			width:  0px;
+			height: 0px;
+			// width:  23px;
+			// height: 26px;
+			background-color: #000e8d;
 			font-weight: 600;
 			font-size: .8rem;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			text-decoration: none;
+			margin-top: 10px;
+			opacity: 0.8;
 		}
 		
 		/* TABLET */
@@ -406,6 +410,7 @@
 		
 			.budget-buttons {
 				justify-content: flex-end;
+				padding-bottom: 1vw;
 			}
 		
 			.budget-list {

@@ -1,9 +1,12 @@
-<h1>Add product</h1>
+<section class="section-ver-presupuesto">
+  <%= render 'shared/header'%>
+  <h1>Add product</h1>
 
-<%= render "form", lineitem: @lineitem %>
+  <%= render "form", lineitem: @lineitem %>
 
-<br>
+  <br>
 
-<div>
-  <%= link_to "Back to budgets", budgets_path %>
-</div>
+  <div>
+    <%= link_to "Back to budgets", budgets_path %>
+  </div>
+</section>
