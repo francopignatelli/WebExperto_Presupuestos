@@ -394,7 +394,7 @@
 				padding-left: 25px;
 			}
 
-			.arrow-down{
+			.down-arrow{
 				margin: -4px;
 			}
 
@@ -484,12 +484,14 @@
 		@media screen and (min-width: 993px) {
 			/* Nav */
 			.nav-search-input {
-				width: 600px;
-				height: 35px;
-				margin-bottom: 20px;
+				// width: 600px;
+				// height: 35px;
+				// margin-bottom: 20px;
+				width: 30vw;
 			}
 			.search-icon {
 				// left: 550px;
+				left: 28vw;
 			}
 
 			.dropdown-categories {
