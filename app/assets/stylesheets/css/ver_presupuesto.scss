@@ -11,7 +11,7 @@
 			text-align: center;
 			color: #000e8d;
 			font-size: 1.5rem;
-			margin-top: 1rem;
+			margin-top: 2rem;
 		}
 		
 		/* Navbar */
@@ -239,6 +239,12 @@
 		.budget-container {
 			padding: 30px 20px;
 		}
+
+		.see-budget-card{
+			border: 1px solid #5f6599;
+			border-radius: 5px;
+			margin-top: 10px;
+		}
 		
 		.budget {
 			display: flex;
@@ -260,8 +266,8 @@
 		}
 		
 		.budget-image img {
-			margin-top: 15px;
-			width: 70px;
+			margin: 5px;
+			width: 120px;
 			height: 70px;
 		}
 		
@@ -269,13 +275,14 @@
 			margin-top: 10px;
 			display: flex;
 			align-items: center;
-			gap: 20px;
-			width: 90%;
+			gap: 5px;
+			
 		}
 		
 		.budget-card-description p {
+			margin-left: 10px;
 			margin-top: 10px;
-			width: 170px;
+			width: 20px;
 			font-size: 0.8rem;
 		}
 		
@@ -408,7 +415,14 @@
 				gap: 40px;
 				padding: 0px 30px;
 			}
-		
+			
+			.budget-image{
+				display: flex;
+				justify-content: space-between;
+				gap: 10px;
+				
+			}
+
 			.budget-image img {
 				margin-top: 30px;
 			}
@@ -423,8 +437,9 @@
 		
 			.budget-info {
 				display: flex;
+				flex-direction: row;
 				align-items: center;
-				gap: 20px;
+				gap: 5px;
 				margin-left: 0px;
 			}
 			.budget-buttons {
@@ -439,8 +454,34 @@
 				height: 1000px;
 			}
 			.budget-container {
-				margin: 10px 465px;
+				
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				gap:10px;
 			}
+			.bd-budget-name{
+				width: 400px;
+				border: 1px solid #7f85c0;
+				border-radius: 5px;
+				height: 35px;
+			}
+			.bd-budget-name::placeholder {
+				font-size: 16px;
+			}
+
+			.bd-budget-description{
+				width: 400px;
+				height: 100px;
+				border: 1px solid #7f85c0;
+				border-radius: 5px;
+				
+			}
+			.bd-budget-description::placeholder {
+				font-size: 12px;
+			}
+		
 		
 			.budget {
 				justify-content: space-evenly;
@@ -454,9 +495,19 @@
 			}
 		
 			.add-product {
+				margin: 0 auto;
 				text-align: center;
 				margin-top: 50px;
 				font-weight: 600;
+				border-radius: 50px;
+				background-color: #000e8d;
+				color: white;
+				border: none;
+				font-size: 0.85rem;
+				width: 140px;
+				height: 35px;
+				padding-top: 5px;
+				text-decoration: none;
 			}
 			.budgets {
 				margin: 0 auto;
