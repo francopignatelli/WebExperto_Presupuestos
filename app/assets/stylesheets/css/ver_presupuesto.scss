@@ -11,7 +11,7 @@
 			text-align: center;
 			color: #000e8d;
 			font-size: 1.5rem;
-			margin-top: 2rem;
+			
 		}
 		
 		/* Navbar */
@@ -344,17 +344,21 @@
 			background-color: #ffffff;
 			color: #000e8d;
 			font-weight: 600;
-			padding: 10px;
+			
 		}
 		
 		/* TABLET */
 		@media screen and (min-width: 768px) {
+			header{
+				background-color: #000e8d;
+			}
 			/* Navbar */
 			.nav-desktop {
+				max-width: 1000px;
+				margin: 0 auto;
 				padding: 5px 0px;
-				background-color: #000e8d;
 				display: flex;
-				justify-content: space-around;
+				justify-content: space-between;
 				align-items: center;
 			}
 			.nav {
@@ -453,6 +457,16 @@
 			body {
 				height: 1000px;
 			}
+
+			.see-budget-title{
+				margin: 2rem auto 0;
+				max-width: 1000px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				
+			}
+
 			.budget-container {
 				
 				display: flex;

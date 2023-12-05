@@ -6,12 +6,15 @@
     <!-- Search bar -->
     <div class="search-container">
       <div class="input-search-container">
-      <%= image_tag 'img/icons/search.svg', alt: "search", class: "search-icon" %>
-      <%= form_tag(budgets_path, method: :get, class: "budget-search-form") do %>
-        <%= text_field_tag :search, params[:search], class: "search-input", placeholder: "Buscar presupuestos" %>
-        <%= submit_tag "Buscar", class: "create-budget"%>
-      <% end %>
-    </div>
+        <%= form_tag(budgets_path, method: :get, class: "budget-search-form") do %>
+          <%= text_field_tag :search, params[:search], class: "search-input", placeholder: "Buscar presupuestos" %>
+           <button type="submit">
+              <%= image_tag 'img/icons/search.svg', alt: "search", class: "search-icon" %>
+          </button>
+          <%# submit_tag "Buscar", class: "create-budget"%>
+        <% end %>
+        <%#= submit_tag "Buscar", class: "create-budget"%>
+      </div>
   </div>
   <!-- Presupuestos -->
     <div class="budget-container">
