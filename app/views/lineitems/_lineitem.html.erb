@@ -1,29 +1,26 @@
 <div id="<%= dom_id lineitem %>">
   <div class="see-budget-card">
-       <div class="budget-image">
-            <%# AGREGAR PATH DE IMAGEN %>
-            <%# if lineitem.product.image.attached? %>
-            <% if true %>
-            <div>
-              <%#= image_tag lineitem.product.image, style: "max-width: 300px; max-height: 300px;" %>
-              <%= image_tag 'img/presupuestos/presupuesto-casa.jpg', alt:"imagen", style: "max-width: 300px; max-height: 300px;" %>
-            </div>
-            <% else %>
-              <p>Imagen no disponible</p>
-            <% end %>
-            <div class="budget-info">
-              <div class="budget-card-description">
-                <div>
-                  <p><%= lineitem.product.name %></p>
-                </div>
-              </div>
-              <div class="price-container">
-                <div class="p-container">
-                  <%= lineitem.quantity %>
-                </div>
-                <%= number_to_currency(lineitem.product.price, unit: '$', precision: 2, delimiter: ',', separator: '.1') %> 
-              </div>
+    <div class="budget-image">
+      <%# AGREGAR PATH DE IMAGEN %>
+      <div>
+        <% if lineitem.product.image.attached? %>            
+          <%= image_tag lineitem.product.image, style: "max-width: 300px; max-height: 300px;" %>            
+        <% else %>
+          <%= image_tag 'img/presupuestos/presupuesto-casa.jpg', alt:"imagen", style: "max-width: 300px; max-height: 300px;" %>
+        <% end %>
+      </div>
+      <div class="budget-info">
+        <div class="budget-card-description">
+          <div>
+            <p><%= lineitem.product.name %></p>
+          </div>
         </div>
-        
+        <div class="price-container">
+          <div class="p-container">
+            <%= lineitem.quantity %>
+          </div>
+          <%= number_to_currency(lineitem.product.price, unit: '$', precision: 2, delimiter: ',', separator: '.1') %> 
+        </div>
+    </div>
   </div>
 </div>
