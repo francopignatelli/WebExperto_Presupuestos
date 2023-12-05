@@ -307,13 +307,12 @@
 			
 			.back-logout {
 				color: #000e8d;
-				width: 160px;
-				height: 35px;
+				width: 150px;
 				font-size: 1rem;
 				padding: 5px 20px;
 				border: 1px solid #000e8d;
 				border-radius: 50px;
-				background-color: white;
+				// background-color: white;
 				margin: 20px 0px;
 				display: flex;
 				font-weight: 600;
@@ -351,8 +350,9 @@
 			}
 		
 			.form-buttons {
-				margin-top: 20px;
-				justify-content: flex-end;
+				// margin-top: 20px;
+				// justify-content: flex-end;
+				gap: 20px;
 			}
 		}		
 	}
