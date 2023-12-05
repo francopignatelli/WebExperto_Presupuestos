@@ -10,12 +10,12 @@
     </div>
   <% end %>
   <div class="budget-container">
-    <%= form.text_field :name, placeholder: 'Budget name' %>
-    <%= form.text_area :description, placeholder: 'Budget description' %>
+    <%= form.text_field :name, placeholder: 'Budget name', class:"bd-budget-name" %>
+    <%= form.text_area :description, placeholder: 'Budget description', class:"bd-budget-description" %>
   </div>
   <div class="budgets">
     <% if @budget.id != nil %>
-      <%= link_to "Add Product", new_budget_lineitem_path(@budget), class: "add-product" %>
+      <%= link_to "Agregar producto", new_budget_lineitem_path(@budget), class: "add-product" %>
     <% end %>
 
     <div id="lineitems">
@@ -24,7 +24,6 @@
       <% else %>
         <% @budget.lineitems.each do |lineitem| %>
             <%= render lineitem %>
-    </div>
           <p>
             <%= link_to "Show this product", lineitem %>
           </p>

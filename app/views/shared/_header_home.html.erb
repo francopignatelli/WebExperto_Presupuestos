@@ -68,7 +68,7 @@
 				</div>
 				<div class="dropdown-categories">
 					<div class="category-header">
-                            Categorias <%= image_tag 'img/icons/down-arrow.png', alt:"arrow"%>
+                            Categorías <%= image_tag 'img/icons/down-arrow.png', alt:"arrow"%>
 					</div>
 					<div class="dropdown-content">
                         <% @categories.each do |category| %>
@@ -90,7 +90,7 @@
                             </div>
                         </div>
                     <% else %>
-                        <%= link_to 'Login', new_user_session_path , class: "btn-log-in" %>
+                        <%= link_to 'Iniciar sesión', new_user_session_path , class: "btn-log-in btn-iniciar-sesion" %>
                     <% end %>
 			</div>
 		</nav>
