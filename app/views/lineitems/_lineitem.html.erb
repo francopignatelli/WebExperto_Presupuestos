@@ -2,7 +2,7 @@
   <div class="see-budget-card">
     <div class="budget-image">
       <%# AGREGAR PATH DE IMAGEN %>
-      <div>
+      <div class="b-img">
         <% if lineitem.product.image.attached? %>            
           <%= image_tag lineitem.product.image, style: "max-width: 300px; max-height: 300px;" %>            
         <% else %>
@@ -21,7 +21,7 @@
           </div>
           <%= number_to_currency(lineitem.product.price, unit: '$', precision: 2, delimiter: ',', separator: '.1') %> 
         </div>
-        <%= link_to "Show this product", lineitem %>
+        <%= link_to "Editar", lineitem %>
     </div>
   </div>
 </div>

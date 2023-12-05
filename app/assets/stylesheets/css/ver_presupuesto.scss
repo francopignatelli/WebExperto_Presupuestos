@@ -272,7 +272,7 @@
 		}
 		
 		.budget-card-description {
-			margin-top: 10px;
+		
 			display: flex;
 			align-items: center;
 			gap: 5px;
@@ -281,13 +281,12 @@
 		
 		.budget-card-description p {
 			margin-left: 10px;
-			margin-top: 10px;
-			width: 20px;
+			
 			font-size: 0.8rem;
 		}
 		
 		.price-container {
-			margin-top: 10px;
+			margin-left: auto;
 			display: flex;
 			gap: 43px;
 			align-items: center;
@@ -423,12 +422,19 @@
 			.budget-image{
 				display: flex;
 				justify-content: space-between;
+				align-items: center;
 				gap: 10px;
 				
 			}
 
+			.b-img{
+				display: flex;
+  				justify-content: center;
+  				align-items: center;
+			}
+
 			.budget-image img {
-				margin-top: 30px;
+				
 			}
 		
 			.budget-card-description img {
@@ -436,7 +442,7 @@
 			}
 		
 			.budget-card-description p {
-				width: 250px;
+				
 			}
 		
 			.budget-info {
