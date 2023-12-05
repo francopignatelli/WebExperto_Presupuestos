@@ -368,14 +368,17 @@
 			}
 			.search-icon {
 				position: absolute;
-				top: 38%;
+				// top: 38%;
+				top: 29%;
 				transform: translateY(-50%);
-				left: 260px;
+				// left: 260px;
+				left: 190px;
 				cursor: pointer;
-				width: 30px;
+				// width: 30px;
+				width: 25px;
 			}
 			.nav-search-input {
-				width: 300px;
+				// width: 300px;
 				padding-left: 0px;
 				border: 1px solid #000e8d;
 				border-radius: 50px;
@@ -388,8 +391,13 @@
 				position: relative;
 				justify-content: center;
 				align-items: center;
-				padding-top: 25px;
+				padding-left: 25px;
 			}
+
+			.arrow-down{
+				margin: -4px;
+			}
+
 			.my-budget-container{
 				display:flex;
 				gap: 10px;
@@ -481,7 +489,7 @@
 				margin-bottom: 20px;
 			}
 			.search-icon {
-				left: 550px;
+				// left: 550px;
 			}
 
 			.dropdown-categories {

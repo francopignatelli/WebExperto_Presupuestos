@@ -49,13 +49,13 @@
 					</div>
 					<div>					
 							<label for="">			
-								<label>Direccion</label><br />
+								<label>Dirección</label><br />
 								<%= f.text_field :address %>
 							</label>
 					</div>
 					<div>					
 							<label for="">			
-								<label>Telefono</label><br />
+								<label>Teléfono</label><br />
 								<%= f.text_field :phone %>
 							</label>
 					</div>
@@ -69,9 +69,9 @@
 			</div>
 			
 			<div class="form-buttons">
-				<%= f.submit "Update" %>
-				<%= link_to "Back", :root, class: "back-logout"%>
-				<%= link_to 'Logout', destroy_user_session_path, method: :delete , class: "back-logout" %>
+				<%= f.submit "Actualizar" %>
+				<%= link_to "Volver", :root, class: "back-logout"%>
+				<%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete , class: "back-logout" %>
 			</div>
 		<% end %>
 	</div>
