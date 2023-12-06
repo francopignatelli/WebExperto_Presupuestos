@@ -1,5 +1,5 @@
 <section class="section-ver-presupuesto">
-  <%= render 'shared/header' %>
+  <%= render partial: 'shared/header', locals: { view: false } %>
   <h1>Editing lineitem</h1>
 
   <%= render "form", lineitem: @lineitem %>

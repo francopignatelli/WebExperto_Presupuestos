@@ -1,11 +1,17 @@
 <!-- Navbar -->
 <header>
 	<nav class="nav-desktop">
-				<img class="logo-burger" src="./img/logos/burger.png" alt="" />
-				<%= link_to image_tag('img/logos/logo-white.svg', alt:"logo"), :root %>
-				<img class="budget-logo" src="./img/logos/presup.png" alt="" />
+		<img class="logo-burger" src="./img/logos/burger.png" alt="" />
+		<%= link_to image_tag('img/logos/logo-white.svg', alt:"logo"), :root %>
+		<img class="budget-logo" src="./img/logos/presup.png" alt="" />
+		<% unless view == 'log' %>
+			<% if view == 'edit' %>
+				<%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete, class: "back-button" %>
+			<% else %>
 				<%= link_to "Mi cuenta", edit_user_registration_path , class: "back-button" %>
-			</nav>
+			<% end %>
+		<% end %>
+	</nav>
 	<!-- Navbar mobile -->
 	<nav class="nav">
 		<div class="nav__container">

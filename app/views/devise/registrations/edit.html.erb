@@ -1,78 +1,52 @@
 <section class="section-mi-cuenta">
-	<%= render 'shared/header' %>
-	<div class="my-account-cointainer">
-		<h1>Mi cuenta</h1>
-		<%= link_to budgets_path, class: "my-account-budgets" do %>
-			<div>
-				<p>Mira tus presupuestos</p>
-			</div>
-		<% end %>
-		<div class="form-container mi-cuenta-form-div">
-			<div class="form-column-1">
-				<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-					<%= render "devise/shared/error_messages", resource: resource %>
-					<div>					
-							<label for="">
-								<label>Nombre</label><br />
-								<%= f.text_field :name, autofocus: true %>
-							</label>
-					</div>
-					<div>					
-							<label for="">
-								<label>Apellido</label><br />
-								<%= f.text_field :last_name %>
-							</label>
-					</div>
-					<div>					
-							<label for="">
-								<label>Contraseña actual</label><i>(para confirmar cambios)</i><br />
-								<%= f.password_field :current_password, autocomplete: "current-password" %>
-							</label>
-					</div>
-					<div>					
-							<label for="">
-								<label>Nueva contraseña</label><i>(Dejar en blanco si no desea cambiar)</i><br />
-								<%= f.password_field :password, autocomplete: "new-password" %>
-								<% if @minimum_password_length %>
-									<br />
-									<em><%= @minimum_password_length %> caracteres minimos</em>
-								<% end %>
-							</label>
-					</div>
+	<%= render partial: 'shared/header', locals: { view: 'edit' } %>
+  <div class="my-account-cointainer">
+    <h1>Mi cuenta</h1>
+		<%= link_to 'Mira tus presupuestos', budgets_path, class: "my-account-budgets" %>
+		<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+			<%= render "devise/shared/error_messages", resource: resource %>
+			<div class="form-container mi-cuenta-form-div">
+				<div class="input-wraper">
+					<label for="name">Nombre</label>
+					<%= f.text_field :name, autofocus: true %>
 				</div>
-				<div class="form-column-2">
-					<div>					
-							<label for="">
-								<label>Email</label><br />
-								<%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-							</label>
-					</div>
-					<div>					
-							<label for="">			
-								<label>Dirección</label><br />
-								<%= f.text_field :address %>
-							</label>
-					</div>
-					<div>					
-							<label for="">			
-								<label>Teléfono</label><br />
-								<%= f.text_field :phone %>
-							</label>
-					</div>
-					<div>					
-							<label for="">			
-								<label>Repetir contraseña</label><br />
-								<%= f.password_field :current_password, autocomplete: "current-password" %>
-							</label>
-					</div>				
+				<div class="input-wraper">
+					<label for="last_name">Apellido</label>
+					<%= f.text_field :last_name %>
+				</div>
+				<div class="input-wraper">
+					<label for="current_password">Contraseña Actual (para confirmar cambios)</label>
+					<%= f.password_field :current_password, autocomplete: "current-password" %>
+				</div>
+				<div class="input-wraper">
+					<label for="password">Nueva contraseña (Dejar en blanco si no desea cambiar) </label>
+					<%= f.password_field :password, autocomplete: "new-password" %>
+					<% if @minimum_password_length %>
+						<em><%= @minimum_password_length %> caracteres mínimos</em>
+					<% end %>
+				</div>
+				<div class="input-wraper">
+					<label for="email">Email</label>
+					<%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+				</div>
+				<div class="input-wraper">
+					<label for="address">Dirección</label>
+					<%= f.text_field :address %>
+				</div>
+				<div class="input-wraper">
+					<label for="phone">Teléfono</label>
+					<%= f.text_field :phone %>
+				</div>
+				<div class="input-wraper">
+					<label for="password_confirmation">Repetir contraseña</label>
+					<%= f.password_field :password_confirmation, autocomplete: "current-password" %>
 				</div>
 			</div>
-			
 			<div class="form-buttons">
-				<%= f.submit "Actualizar" %>
-				<%= link_to "Volver", :root, class: "back-logout"%>
-				<%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete , class: "back-logout" %>
+				<%= link_to "Volver", root_path, class: "back-logout" %>
+				<%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete, class: "back-logout" %>
+				<%= f.submit "Actualizar", class: "submit-button" %>
 			</div>
 		<% end %>
-	</div>
+  </div>
 </section>
