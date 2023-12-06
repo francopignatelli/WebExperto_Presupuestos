@@ -100,6 +100,15 @@ es:
   activerecord:
     errors:
       models:
+        lineitem:
+          blank: "Se encontraron %{count} errores al intentar guardar este ítem de línea:"
+          attributes:
+            product:
+              blank: "La traducción del producto está ausente. Las opciones consideradas fueron:"
+            quantity:
+              greater_than: "debe ser mayor a cero"
+      messages:
+        blank: "2 errores impidieron que este ítem de línea se guardara:"
         user:
           attributes:
             current_password:

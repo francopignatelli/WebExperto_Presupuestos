@@ -28,10 +28,6 @@
       <% else %>
         <% @budget.lineitems.each do |lineitem| %>
             <%= render lineitem %>
-          <p>
-            <%#= link_to "Show this product", lineitem %>
-          </p>
-          <hr>
         <% end %>  
         <p class="total-price">
           TOTAL: <%= number_to_currency(@total_price, unit: '$', precision: 2, delimiter: ',', separator: '.') %>
