@@ -1,11 +1,11 @@
 .section-mi-cuenta{
 	& {
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-			font-family: "Montserrat", sans-serif;
-		}
+		// * {
+		// 	margin: 0;
+		// 	padding: 0;
+		// 	box-sizing: border-box;
+		// 	font-family: "Montserrat", sans-serif;
+		// }
 		
 		.nav-desktop {
 			display: none;
@@ -232,8 +232,7 @@
 		.form-buttons {
 			display: flex;
 			flex-direction: row;
-			justify-content: center;
-			gap:10px;
+			justify-content: space-between;
 			padding:5px;
 		}
 		
@@ -245,6 +244,7 @@
 			border-radius: 50px;
 			background-color: white;
 			margin: 20px 0px;
+			font-weight: 600;
 		}
 		
 		input[type="email"] {
@@ -349,7 +349,7 @@
 			.form-buttons {
 				// margin-top: 20px;
 				// justify-content: flex-end;
-				gap: 20px;
+				// gap: 20px;
 			}
 		}		
 	}
