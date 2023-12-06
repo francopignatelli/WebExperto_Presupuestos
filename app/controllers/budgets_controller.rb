@@ -5,11 +5,13 @@ class BudgetsController < ApplicationController
   # GET /budgets or /budgets.json
   def index
     @budgets = current_user.budgets
+  
     if params[:search]
-      @budgets = Budget.joins(lineitems: :product).where('lower(budgets.name) LIKE ? OR lower(products.name) LIKE ?',
-      "%#{params[:search].downcase}%", "%#{params[:search].downcase}%").distinct
-    else
-      @budgets = Budget.all
+      @budgets = Budget.joins("LEFT JOIN lineitems ON budgets.id = lineitems.budget_id")
+                      .joins("LEFT JOIN products ON lineitems.product_id = products.id")
+                      .where('lower(budgets.name) LIKE ? OR lower(products.name) LIKE ?',
+                             "%#{params[:search].downcase}%", "%#{params[:search].downcase}%")
+                      .distinct
     end
   end
 
