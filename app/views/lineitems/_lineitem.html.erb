@@ -6,18 +6,19 @@
         <% if lineitem.product.image.attached? %>            
           <%= image_tag lineitem.product.image, style: "max-width: 300px; max-height: 300px;" %>            
         <% else %>
-          <%= image_tag 'img/presupuestos/presupuesto-casa.jpg', alt:"imagen", style: "max-width: 300px; max-height: 300px;" %>
+          <%= image_tag 'img/presupuestos/televisor.svg', alt:"imagen", style: "max-width: 300px; max-height: 300px;" %>
         <% end %>
       </div>
       <div class="budget-info">
         <div class="budget-card-description">
-          <div>
+          <div>           
             <p><%= lineitem.product.name %></p>
           </div>
         </div>
         <div class="price-container">
           <div class="p-container">
             <%= lineitem.quantity %>
+            <p>Unidad</p>
           </div>
           <%= number_to_currency(lineitem.product.price, unit: '$', precision: 2, delimiter: ',', separator: '.1') %> 
         </div>
