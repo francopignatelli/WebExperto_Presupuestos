@@ -6,8 +6,7 @@
 
   <br>
 
-  <div>
-    <%= link_to "Show this lineitem", @lineitem %> |
-    <%= link_to "Back to lineitems", lineitems_path %>
+  <div class="volver-presupuesto">
+    <%= link_to "Volver al presupuesto", edit_budget_path(@lineitem.budget), class: "back-button"  %>
   </div>
 </section>

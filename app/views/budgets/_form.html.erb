@@ -9,9 +9,13 @@
       </ul>
     </div>
   <% end %>
-  <div class="budget-container">
-    <%= form.text_field :name, placeholder: 'Nombre de presupuesto' %>
-    <%= form.text_area :description, placeholder: 'Descripción del presupuesto' %>
+  <div class="bud-bud-container">
+    <div class="budget-container">
+      <%= form.label :name, 'Nombre de presupuesto' %>
+      <%= form.text_field :name, placeholder: 'Nombre de presupuesto', class:"bud-form-name" %>
+      <%= form.label :name, 'Descripción' %>
+      <%= form.text_area :description, placeholder: 'Descripción del presupuesto',class:"bud-form-desc" %>
+    </div>
   </div>
   <div class="budgets">
     <% if @budget.id != nil %>
@@ -24,19 +28,15 @@
       <% else %>
         <% @budget.lineitems.each do |lineitem| %>
             <%= render lineitem %>
-          <p>
-            <%#= link_to "Show this product", lineitem %>
-          </p>
-          <hr>
         <% end %>  
         <p class="total-price">
-          TOTAL:<%= number_to_currency(@total_price, unit: '$', precision: 2, delimiter: ',', separator: '.') %>
+          TOTAL: <%= number_to_currency(@total_price, unit: '$', precision: 2, delimiter: ',', separator: '.') %>
         </p>
       <% end %>  
     </div>
   </div>
   <div class="budget-buttons">
     <%= form.submit "Guardar presupuesto", class: "create-budget" %>
-		<%= link_to "Volver", budgets_path, class: "quit-budget" %>
+		<%= link_to "Volver", budgets_path, class: "back-budget" %>
   </div>
 <% end %>
