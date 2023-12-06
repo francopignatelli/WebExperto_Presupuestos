@@ -359,7 +359,7 @@
 			}
 			.nav-searchbar-container {
 				display: flex;
-				justify-content: space-around;
+				justify-content: space-between;
 				gap: 5px;
 			}
 			.input-search-container {
@@ -447,7 +447,7 @@
 				text-decoration: none;
 			}
 			.btn-iniciar-sesion{
-				margin-top: 30px;
+				margin-top: 0;
 				margin-right: 30px;
 				width: 130px;
 			}
@@ -495,12 +495,19 @@
 			}
 
 			.dropdown-categories {
-				width: 400px;
+				width: auto;
 				display: flex;
 				flex-direction: row;
 				position: relative;
-				gap: 30px;
+				gap: 40px;
 			}
+
+			.cat-iniciar{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
 			/* Categorias menu desplegable */
 
 			.category-header {
