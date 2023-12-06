@@ -1,5 +1,6 @@
-<section class="section-crear-presupuesto">
+<section class="section-ver-presupuesto">
     <%= render partial: 'shared/header', locals: { view: false } %>
+    <p style="color: green"><%= notice %></p>
     <h1>Nuevo presupuesto</h1>
 
     <%= render "form", budget: @budget %>

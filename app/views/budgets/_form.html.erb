@@ -24,7 +24,7 @@
 
     <div id="lineitems">
       <% if @budget.lineitems.length == 0 %>
-        <p>No products added yet.</p>
+        <p>Sin productos.</p>
       <% else %>
         <% @budget.lineitems.each do |lineitem| %>
             <%= render lineitem %>
