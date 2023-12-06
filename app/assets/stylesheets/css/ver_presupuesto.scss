@@ -349,19 +349,21 @@
 			color: white;
 			border:none;
 			font-weight: 600;
-			
 		}
 		
 		.volver-presupuesto{
 			text-align: center;
 			position: absolute;
-			left: 54vw;
-			bottom: 49.5vh;
+			left: 54%;
+			bottom: 56%;
 		}
 		.volver-presupuesto a{
 			display: contents;
 		}
 
+		.div-fit-content{
+			width: fit-content;
+		}
 
 		/* TABLET */
 		@media screen and (min-width: 768px) {
