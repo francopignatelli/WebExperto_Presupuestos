@@ -240,6 +240,10 @@
 			padding: 30px 20px;
 		}
 
+		.budget-container label{
+			font-weight: 600;
+		}
+
 		.see-budget-card{
 			border: 1px solid #5f6599;
 			border-radius: 5px;
@@ -339,9 +343,9 @@
 			border-radius: 50px;
 			width: 160px;
 			height: 35px;
-			border: 1px solid #000e8d;
-			background-color: #ffffff;
-			color: #000e8d;
+			background-color: #8d0036;
+			color: white;
+			border:none;
 			font-weight: 600;
 			
 		}
@@ -424,6 +428,8 @@
 				justify-content: space-between;
 				align-items: center;
 				gap: 10px;
+				padding-left: 10px;
+				padding-right: 20px;
 				
 			}
 
@@ -442,14 +448,14 @@
 			}
 		
 			.budget-card-description p {
-				
+				font-size: 1rem;
 			}
 		
 			.budget-info {
 				display: flex;
 				flex-direction: row;
 				align-items: center;
-				gap: 5px;
+				gap: 25px;
 				margin-left: 0px;
 			}
 			.budget-buttons {
@@ -473,32 +479,38 @@
 				
 			}
 
+			.bud-bud-container{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
 			.budget-container {
-				
+				margin: 0 auto;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
-				align-items: center;
+				align-items: flex-start;
 				gap:10px;
 			}
-			.bd-budget-name{
+			.bud-form-name{
 				width: 400px;
 				border: 1px solid #7f85c0;
 				border-radius: 5px;
 				height: 35px;
 			}
-			.bd-budget-name::placeholder {
+			.bud-form-name::placeholder {
 				font-size: 16px;
 			}
 
-			.bd-budget-description{
+			.bud-form-desc{
 				width: 400px;
 				height: 100px;
 				border: 1px solid #7f85c0;
 				border-radius: 5px;
 				
 			}
-			.bd-budget-description::placeholder {
+			.bud-form-desc:placeholder {
 				font-size: 12px;
 			}
 		
@@ -548,6 +560,24 @@
 			.search-icon {
 				left: 600px;
 			}
+
+			/* Buttons*/
+			.back-budget{
+				text-align: center;
+				text-decoration: none;
+				border-radius: 50px;
+				width: 160px;
+				height: 35px;
+				background-color: white;
+				color: #000e8d;
+				border:1px solid #000e8d;
+				font-weight: 600;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+			
 		}		
 	}
 }
