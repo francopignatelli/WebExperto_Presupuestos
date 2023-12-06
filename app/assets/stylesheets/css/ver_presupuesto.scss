@@ -350,6 +350,17 @@
 			
 		}
 		
+		.volver-presupuesto{
+			text-align: center;
+			position: absolute;
+			left: 54vw;
+			bottom: 49.5vh;
+		}
+		.volver-presupuesto a{
+			display: contents;
+		}
+
+
 		/* TABLET */
 		@media screen and (min-width: 768px) {
 			header{
