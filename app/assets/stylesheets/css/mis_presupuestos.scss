@@ -264,13 +264,16 @@
 		}
 		
 		.budget-image-container p {
-			width: 180px;
+			width: 130px;
 			font-size: 0.8rem;
 			font-weight: bold;
 			color: white;
 			margin-bottom: 5px;
 			position: relative;
 			z-index: 2;
+			white-space: nowrap; /* Evita el salto de línea */
+			overflow: hidden; /* Oculta el texto que se desborda */
+			text-overflow: ellipsis; /* Añade puntos suspensivos al final */
 		}
 		
 		.budget a {
@@ -406,6 +409,10 @@
 			}
 			.budget-image-container p {
 				font-size: 0.9rem;
+				width: 170px; /* Ancho máximo para mostrar */
+				white-space: nowrap; /* Evita el salto de línea */
+				overflow: hidden; /* Oculta el texto que se desborda */
+				text-overflow: ellipsis; /* Añade puntos suspensivos al final */
 			}
 		
 			.budget-buttons {
