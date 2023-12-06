@@ -61,18 +61,20 @@
 						<input type="text" class="nav-search-input" placeholder="" />
 					</div>
 				</div>
-				<div class="dropdown-categories">
-					<div class="category-header">
-                            Categorias <%= image_tag 'img/icons/down-arrow.png', alt:"arrow", class: "down-arrow"%>
-					</div>
-					<div class="dropdown-content">
-                        <% @categories.each do |category| %>
-                            <p>
-                                <%= link_to category.name, category_path(category) %>
-                            </p>
-                        <% end %>
-					</div> 
-				</div>
+                <div class="cat-iniciar">
+                    <div class="dropdown-categories">
+                        <div class="category-header">
+                                Categorias <%= image_tag 'img/icons/down-arrow.png', alt:"arrow", class: "down-arrow"%>
+                        </div>
+                        <div class="dropdown-content">
+                            <% @categories.each do |category| %>
+                                <p>
+                                    <%= link_to category.name, category_path(category) %>
+                                </p>
+                            <% end %>
+                        </div>
+
+                    </div>
                     <% if user_signed_in? %>
                         <div class="my-budget-container">
                             <div class="button-img-cont">
@@ -86,7 +88,8 @@
                         </div>
                     <% else %>
                         <%= link_to 'Iniciar sesión', new_user_session_path , class: "btn-log-in btn-iniciar-sesion" %>
-                    <% end %>
+                    <% end %> 
+                </div>
 			</div>
 		</nav>
 </section>
