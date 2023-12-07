@@ -331,6 +331,13 @@
 			.login-container {
 				width: 35%;
 			}
+
+			.mi-cuenta-form{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
 		}		
 	}
 }
