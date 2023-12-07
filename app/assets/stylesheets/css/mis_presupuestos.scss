@@ -1,11 +1,5 @@
 .section-mis-presupuestos{
 	& {
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-			font-family: "Montserrat", sans-serif;
-		}
 		
 		/* Navbar */
 		.nav-desktop {
@@ -202,12 +196,18 @@
 		}
 		
 		.search-icon {
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
+			// position: absolute;
+			// top: 50%;
+			// transform: translateY(-50%);
 			// left: 250px;
+			// cursor: pointer;
+			// width: 30px;
+			background-color: unset;
+			border: none;
+			position: relative;
 			cursor: pointer;
-			width: 30px;
+			width: 36px;
+			top: 10px;
 		}
 		
 		.search-input {
@@ -217,6 +217,7 @@
 			border: 1px solid #000e8d;
 			box-shadow: 2px 2px 5px rgba(0, 14, 141, 0.1);
 			border-radius: 50px;
+			position: absolute;
 		}
 		
 		/*Presupuestos*/
@@ -385,7 +386,7 @@
 		
 			/* Searchbar */
 			.search-icon {
-				left: auto;
+				// left: auto;
 			}
 		
 			/* Presupuestos */
