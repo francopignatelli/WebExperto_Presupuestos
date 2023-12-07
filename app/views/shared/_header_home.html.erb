@@ -78,12 +78,16 @@
                     <% if user_signed_in? %>
                         <div class="my-budget-container">
                             <div class="button-img-cont">
-                                <%= image_tag 'img/logos/mi_cuenta.png', alt:"logo", class:"img-budg"%>
-                                <%= link_to 'Mi cuenta', edit_user_registration_path, class: "btn-log-in" %>
+                                <%= link_to edit_user_registration_path, class: "btn-log-in" do %>
+                                    <%= image_tag 'img/icons/acc-white.svg', alt: "logo", class: "img-budg" %>
+                                    Mi cuenta
+                                <% end %>
                             </div>
                             <div class="button-img-cont">
-                                <%= image_tag 'img/logos/presup.png', alt:"logo" ,  class:"img-budg"%>
-                                <%= link_to 'Presupuestos', budgets_path, class: "btn-log-in" %>
+                                <%= link_to edit_user_registration_path, class: "btn-log-in" do %>
+                                    <%= image_tag 'img/icons/bud-white.svg', alt: "logo", class: "img-budg" %>
+                                    Presupuestos
+                                <% end %>
                             </div>
                         </div>
                     <% else %>

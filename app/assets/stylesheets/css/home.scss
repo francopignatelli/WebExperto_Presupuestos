@@ -395,12 +395,15 @@
 			.my-budget-container{
 				display:flex;
 				gap: 10px;
+				margin-right: 10px;
 			}
 			
 			.button-img-cont{
 				display:flex;
 				gap: 10px;
 				align-items: center;
+				
+
 			}
 
 			.sub-menu-wrap {
@@ -433,17 +436,19 @@
 				border: none;
 				font-size: 0.9rem;
 				font-weight: bold;
-				width: 110px;
+				// width: 140px;
 				height: 35px;
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				gap: 10px;
 				text-decoration: none;
+				padding: 0 1rem;
 			}
 			.btn-iniciar-sesion{
 				margin-top: 0;
 				margin-right: 30px;
-				width: 130px;
+				width: unset;
 			}
 
 			/* Cards */
@@ -512,17 +517,21 @@
 			.dropdown-content {
 				display: none;
 				position: absolute;
-				background-color: #000e8d;
-				color: white;
+				background-color: #ffffffd1;
+				color: #000e8d;
 				box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 				z-index: 1;
+				top: 100%;
+				border-radius: 1rem;
+				backdrop-filter: blur(10px);
 			}
 
 			.dropdown-content a {
 				display: block;
-				padding: 10px;
+				padding: 1rem 1.5rem;
 				text-decoration: none;
-				color: white;
+
+				
 			}
 
 			.dropdown-content a:hover {
