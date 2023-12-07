@@ -46,7 +46,7 @@ class LineitemsController < ApplicationController
   def update
     respond_to do |format|
       if @lineitem.update(lineitem_params)
-        format.html { redirect_to lineitem_url(@lineitem), notice: "Lineitem was successfully updated." }
+        format.html { redirect_to edit_budget_path(@lineitem.budget), notice: "Producto fue actualizado correctamente." }
         format.json { render :show, status: :ok, location: @lineitem }
       else
         format.html { render :edit, status: :unprocessable_entity }
