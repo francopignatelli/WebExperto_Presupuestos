@@ -1,14 +1,16 @@
 <%= form_with(model: budget) do |form| %>
-  <% if budget.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(budget.errors.count, "error") %> Evitó que este presupuesto no pueda ser guardado...</h2>
+<% if budget.errors.any? %>
+  <div class="container mt-3">
+    <div class="alert alert-danger" role="alert">
+      <h4 class="alert-heading"><%= pluralize(budget.errors.count, "error") %> evitó que este presupuesto no pueda ser guardado...</h4>
       <ul>
         <% budget.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
     </div>
-  <% end %>
+  </div>
+<% end %>
   <div class="bud-bud-container">
     <div class="budget-container">
       <%= form.label :name, 'Nombre de presupuesto' %>

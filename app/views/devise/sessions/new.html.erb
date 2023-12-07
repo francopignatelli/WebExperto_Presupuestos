@@ -18,6 +18,8 @@
 				</div>
 				<!-- fin -->
 				<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+				<%= render "devise/shared/error_messages", resource: resource %>
+	
 					<div class="email-line">
 						<div class="line"></div>
 						<p>o continuá con tu email</p>
