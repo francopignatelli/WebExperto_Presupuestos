@@ -307,6 +307,25 @@
 				align-items: center;
 				text-decoration: none;
 			}
+
+			.close-back-button{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				font-size: .9rem;
+				width: 120px;
+				height: 30px;
+				border-radius: 50px;
+				background-color: white;
+				color: #000e8d;
+				border: none;
+				font-weight: 600;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-decoration: none;
+			}
 			
 			.back-logout {
 				color: #000e8d;
