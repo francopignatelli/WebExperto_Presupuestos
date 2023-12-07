@@ -8,8 +8,8 @@
       <div class="input-search-container">
         <%= form_tag(budgets_path, method: :get, class: "budget-search-form") do %>
           <%= text_field_tag :search, params[:search], class: "search-input", placeholder: "Buscar presupuestos" %>
-           <button type="submit">
-              <%= image_tag 'img/icons/search.svg', alt: "search", class: "search-icon" %>
+           <button type="submit" class="search-icon">
+              <%= image_tag 'img/icons/search.svg', alt: "search" %>
           </button>
           <%# submit_tag "Buscar", class: "create-budget"%>
         <% end %>
