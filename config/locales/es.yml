@@ -101,9 +101,10 @@ es:
     errors:
       models:
         lineitem:
-          blank: "Se encontraron %{count} errores al intentar guardar este ítem de línea:"
+          blank: "Se encontraron errores al intentar guardar este ítem de línea:"
           attributes:
             product:
+              required: "Es necesario elegir un producto"
               blank: "La traducción del producto está ausente. Las opciones consideradas fueron:"
             quantity:
               greater_than: "debe ser mayor a cero"
