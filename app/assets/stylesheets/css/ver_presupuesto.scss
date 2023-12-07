@@ -233,11 +233,44 @@
 		}
 		
 		.budget-container {
-			padding: 30px 20px;
+			// padding: 30px 20px;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			gap:10px;
+		}
+
+		.bud-bud-container{
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 
 		.budget-container label{
 			font-weight: 600;
+		}
+
+		.bud-form-name{
+			width: 400px;
+			border: 1px solid #7f85c0;
+			border-radius: 5px;
+			height: 35px;
+		}
+		.bud-form-name::placeholder {
+			font-size: 16px;
+		}
+
+		.bud-form-desc{
+			width: 400px;
+			height: 100px;
+			border: 1px solid #7f85c0;
+			border-radius: 5px;
+			
+		}
+		.bud-form-desc:placeholder {
+			font-size: 12px;
 		}
 
 		.see-budget-card{
@@ -288,7 +321,7 @@
 		}
 		
 		.price-container {
-			margin-left: auto;
+			// margin-left: auto;
 			display: flex;
 			gap: 43px;
 			align-items: center;
@@ -298,6 +331,10 @@
 			display: flex;
 			gap: 20px;
 			align-items: center;
+		}
+
+		.p-container p{
+			margin: 0px;
 		}
 		
 		.price-container span {
@@ -372,6 +409,16 @@
 
 		/* TABLET */
 		@media screen and (min-width: 768px) {
+
+			.see-budget-title{
+				margin: 2rem auto 0;
+				max-width: 1000px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				
+			}
+
 			header{
 				background-color: #000e8d;
 			}
@@ -473,15 +520,64 @@
 				align-items: center;
 				gap: 25px;
 				margin-left: 0px;
+				justify-content: space-between;
 			}
+
 			.budget-buttons {
 				margin-top: 20px;
 				margin-bottom: 2vh;
 			}
+
+			.price-div{
+				width: 7em;
+				text-align: end;
+			}
+
+			.quantity-div{
+				width: 1.9rem;
+				text-align: end;
+			}
+
+			/* Buttons*/
+			.back-budget{
+				text-align: center;
+				text-decoration: none;
+				border-radius: 50px;
+				width: 160px;
+				height: 35px;
+				background-color: white;
+				color: #000e8d;
+				border:1px solid #000e8d;
+				font-weight: 600;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.add-product {
+				margin: 0 auto;
+				text-align: center;
+				font-weight: 600;
+				border-radius: 50px;
+				background-color: #000e8d;
+				color: white;
+				border: none;
+				font-size: 0.85rem;
+				width: 140px;
+				height: 35px;
+				text-decoration: none;
+
+				display:flex;
+				align-items:center;
+				justify-content: center;
+			}
+
 		}
 		
 		/* DESKTOP */
-		@media screen and (min-width: 993px) {
+		// @media screen and (min-width: 993px) {
+		@media screen and (min-width: 1320px) {
 			body {
 				height: 1000px;
 			}
@@ -562,7 +658,7 @@
 			}
 
 			.budgets {
-				margin: 0 auto;
+				margin: 50px auto 0px;
 				width: 50%;
 				display: flex;
 				flex-direction: column;
