@@ -10,18 +10,22 @@
       </div>
       <div class="budget-info">
         <div class="budget-card-description">
-          <div>           
+          <div>
             <p><%= lineitem.product.name %></p>
           </div>
         </div>
         <div class="price-container">
           <div class="p-container">
-            <%= lineitem.quantity %>
+            <div class="quantity-div">
+              <%= lineitem.quantity %>
+            </div>
             <p>Unidad</p>
           </div>
-          <%= number_to_currency(lineitem.product.price, unit: '$', precision: 2, delimiter: ',', separator: '.1') %> 
+          <div class="price-div">
+            <%= number_to_currency(lineitem.product.price, unit: '$', precision: 2, delimiter: ',', separator: '.1') %>
+          </div>
+          <%= link_to "Editar", edit_lineitem_path(lineitem) %>
         </div>
-        <%= link_to "Editar", edit_lineitem_path(lineitem) %>
       </div>
     </div>
   </div>
