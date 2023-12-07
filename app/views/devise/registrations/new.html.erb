@@ -1,4 +1,4 @@
-<section class="section-registro">
+<section class="section-iniciar-sesion">
   <%= render partial: 'shared/header', locals: { view: 'log' } %>
   <main class="login"> 
 	<!-- Agregado por carlos -->
@@ -6,46 +6,33 @@
 		<div class="my-account-cointainer">
 			<%= image_tag 'img/registro/registrarme.svg', alt:"logo", class:"img-sesion"%>
 			<div class="login-container">
-				<p>¡Bienvenido! ingresá tu método para iniciar sesión</p>
-				<!-- Esta parte no tiene implementacion -->
-				<div class="logo-container">
-					<div>
-						<%= image_tag 'img/logos/google.png', alt:"logo", class:"logo-google"%>
-					</div>
-					<div>
-						<%= image_tag 'img/logos/facebook.png', alt:"logo", class:"logo-facebook"%>
-					</div>
-				</div>
 				<!-- fin -->
 				<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= render "devise/shared/error_messages", resource: resource %>
-        <div class="email-line">
-						<div class="line"></div>
-						<p>o continuá con tu email</p>
-						<div class="line"></div>
-				</div>
-        <div class="field">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-        </div>
+          <%= render "devise/shared/error_messages", resource: resource %>
+          <div class="mi-cuenta-form">
+            <div class="field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            </div>
 
-        <div class="field">
-          <%= f.label :password %>
-          <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
-          <% end %><br />
-          <%= f.password_field :password, autocomplete: "new-password" %>
-        </div>
+            <div class="field">
+              <%= f.label :password %>
+              <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+              <%= f.password_field :password, autocomplete: "new-password" %>
+            </div>
 
-        <div class="field">
-          <%= f.label :password_confirmation %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-        </div>
+            <div class="field">
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+            </div>
 
-        <div class="actions">
-          <%= f.submit "Registrarse" %>
-        </div>
-      <% end %>
+            <div class="actions">
+              <%= f.submit "Registrarse" %>
+            </div>
+          </div>
+        <% end %>
 			</div>
 		</div>
 	</main>
