@@ -177,6 +177,23 @@
 		}
 		
 		/* Main */
+		.iniciar-login-container{
+			display: flex;
+			flex-direction: column;
+			
+			height: 450px;
+			border: 0.5px solid rgba(0, 14, 141, 0.2);
+			border-radius: 10px;
+		}
+
+		.iniciar-login-container{
+			color: #000e8d;
+			text-align: center;
+			margin-top: 50px;
+			font-weight: 500;
+			padding: 0px 50px 30px;
+		}
+		
 		.login-container {
 			display: flex;
 			flex-direction: column;
