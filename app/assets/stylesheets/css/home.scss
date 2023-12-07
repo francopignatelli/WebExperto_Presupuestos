@@ -395,12 +395,15 @@
 			.my-budget-container{
 				display:flex;
 				gap: 10px;
+				margin-right: 10px;
 			}
 			
 			.button-img-cont{
 				display:flex;
 				gap: 10px;
 				align-items: center;
+				
+
 			}
 
 			.sub-menu-wrap {
@@ -433,7 +436,7 @@
 				border: none;
 				font-size: 0.9rem;
 				font-weight: bold;
-				width: 110px;
+				width: 140px;
 				height: 35px;
 				display: flex;
 				justify-content: center;
